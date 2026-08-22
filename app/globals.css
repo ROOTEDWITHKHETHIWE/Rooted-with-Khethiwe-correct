@@ -40,7 +40,9 @@ a {
   overflow: hidden;
 }
 
-/* HEADER */
+/* =========================================
+   GLOBAL HEADER
+   ========================================= */
 
 .topbar {
   min-height: 78px;
@@ -49,7 +51,7 @@ a {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 250, 242, 0.88);
+  background: rgba(255, 250, 242, 0.94);
 }
 
 .brand {
@@ -74,7 +76,29 @@ nav {
   text-transform: uppercase;
 }
 
-/* HERO */
+nav a {
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--burgundy);
+}
+
+/* =========================================
+   GENERAL TYPOGRAPHY
+   ========================================= */
+
+.small-label,
+.section-label {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   HOMEPAGE HERO
+   ========================================= */
 
 .hero {
   min-height: 720px;
@@ -83,23 +107,25 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+
   background:
-    radial-gradient(circle at 50% 72%, rgba(245, 188, 136, 0.38), transparent 27%),
-    linear-gradient(180deg, #fbf3e7 0%, #f8e9dc 58%, #edcbbd 100%);
+    radial-gradient(
+      circle at 50% 72%,
+      rgba(245, 188, 136, 0.38),
+      transparent 27%
+    ),
+    linear-gradient(
+      180deg,
+      #fbf3e7 0%,
+      #f8e9dc 58%,
+      #edcbbd 100%
+    );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   padding: 100px 24px 90px;
-}
-
-.small-label,
-.section-label {
-  color: var(--gold);
-  font-size: 9px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -214,7 +240,9 @@ nav {
   transform: rotate(18deg);
 }
 
-/* THRESHOLD */
+/* =========================================
+   HOMEPAGE THRESHOLD
+   ========================================= */
 
 .threshold {
   padding: 120px 8vw;
@@ -249,7 +277,9 @@ nav {
   background: var(--gold);
 }
 
-/* SCRIPTURE */
+/* =========================================
+   HOMEPAGE SCRIPTURE
+   ========================================= */
 
 .scripture {
   padding: 100px 8vw;
@@ -284,7 +314,9 @@ nav {
   letter-spacing: 0.2em;
 }
 
-/* JOURNEY */
+/* =========================================
+   HOMEPAGE JOURNEY
+   ========================================= */
 
 .journey-preview {
   display: grid;
@@ -315,12 +347,17 @@ nav {
   padding-bottom: 7px;
 }
 
-/* WELCOME */
+/* =========================================
+   WELCOME
+   ========================================= */
 
 .welcome {
   padding: 100px 7vw;
   background:
-    linear-gradient(rgba(239, 224, 205, 0.78), rgba(239, 224, 205, 0.78)),
+    linear-gradient(
+      rgba(239, 224, 205, 0.78),
+      rgba(239, 224, 205, 0.78)
+    ),
     var(--parchment);
 }
 
@@ -342,7 +379,415 @@ nav {
   line-height: 1.65;
 }
 
-/* FOOTER */
+/* =========================================
+   JOURNEY PAGE
+   ========================================= */
+
+.journey-hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px 100px;
+  text-align: center;
+}
+
+.journey-hero h1 {
+  margin: 18px 0 24px;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.journey-intro {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  color: var(--muted);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.journey-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--burgundy);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.journey-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.journey-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 110px 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.journey-section h2 {
+  margin: 16px 0 0;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.journey-section p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.journey-section-alt {
+  max-width: none;
+  padding-left: max(24px, calc((100vw - 1100px) / 2));
+  padding-right: max(24px, calc((100vw - 1100px) / 2));
+}
+
+.journey-days {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.journey-days article {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 250, 242, 0.5);
+}
+
+.journey-days span {
+  display: block;
+  margin-bottom: 35px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+}
+
+.journey-days h3 {
+  margin: 0 0 10px;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.journey-days p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.journey-closing {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 24px;
+  text-align: center;
+}
+
+.journey-closing h2 {
+  margin: 20px 0 30px;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.journey-closing p:last-child {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   AWAKE — INDIVIDUAL DAY PAGE
+   ========================================= */
+
+.awake-page {
+  background: var(--ivory);
+}
+
+/* Day Hero */
+
+.day-hero {
+  position: relative;
+  padding: 115px 24px 105px;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(237, 197, 173, 0.55),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #fbf3e7 0%,
+      #f8e9dc 100%
+    );
+}
+
+.day-hero .small-label {
+  margin-bottom: 20px;
+}
+
+.day-hero h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(52px, 8vw, 105px);
+  line-height: 0.92;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.day-hero .ornament {
+  margin: 30px 0 24px;
+}
+
+.day-hero .subtitle {
+  max-width: 650px;
+  color: var(--burgundy-soft);
+  font-size: 21px;
+}
+
+/* Day Scripture */
+
+.day-scripture {
+  padding: 100px 24px;
+  background: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+}
+
+.day-scripture .scripture-inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.day-scripture .quote-mark {
+  color: var(--gold-light);
+  font-size: 75px;
+  line-height: 0.5;
+}
+
+.day-scripture p {
+  margin: 25px auto 22px;
+  color: var(--cream);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.25;
+}
+
+.day-scripture small {
+  color: #d9bd91;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Day Teaching */
+
+.day-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 115px 40px;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+  gap: 80px;
+  background: var(--ivory);
+}
+
+.day-content article {
+  max-width: 700px;
+}
+
+.day-content article p {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+  line-height: 1.7;
+}
+
+.day-content article p:last-child {
+  margin-bottom: 0;
+}
+
+.day-content .section-label {
+  margin-top: 8px;
+}
+
+/* Truth */
+
+.truth-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 80px 70px;
+  background: var(--parchment);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.truth-card h2 {
+  max-width: 800px;
+  margin: 22px auto 0;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 5vw, 55px);
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+/* Reflection */
+
+.reflection-section {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 115px 40px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+  align-items: start;
+  background: var(--cream);
+}
+
+.reflection-section h2 {
+  max-width: 480px;
+  margin: 18px 0 0;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.reflection-space {
+  padding-top: 5px;
+}
+
+.reflection-space p {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.writing-line {
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Prayer */
+
+.prayer-section {
+  padding: 115px 24px;
+  background: var(--ivory);
+  text-align: center;
+}
+
+.prayer-section h2 {
+  max-width: 800px;
+  margin: 25px auto 0;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(28px, 4vw, 43px);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* Response */
+
+.respond-section {
+  padding: 115px 24px 125px;
+  background:
+    linear-gradient(
+      rgba(239, 224, 205, 0.65),
+      rgba(239, 224, 205, 0.65)
+    ),
+    var(--parchment);
+  text-align: center;
+}
+
+.respond-section h2 {
+  max-width: 760px;
+  margin: 22px auto 35px;
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(30px, 4.5vw, 50px);
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.response-box {
+  max-width: 760px;
+  min-height: 180px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.7);
+  color: var(--muted);
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Day Navigation */
+
+.day-navigation {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+
+.day-navigation .text-link {
+  margin-top: 0;
+}
+
+.day-navigation .primary-button {
+  margin: 0;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
   padding: 30px 7vw;
@@ -359,22 +804,38 @@ footer {
   color: var(--gold);
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 700px) {
+  /* Header */
+
   .topbar {
     min-height: 68px;
     padding: 0 5vw;
   }
 
+  .brand {
+    font-size: 8px;
+    gap: 6px;
+  }
+
+  .leaf {
+    font-size: 14px;
+  }
+
   nav {
     gap: 12px;
+    font-size: 8px;
   }
 
   nav a:nth-child(3),
   nav a:nth-child(4) {
     display: none;
   }
+
+  /* Homepage */
 
   .hero {
     min-height: 650px;
@@ -425,154 +886,8 @@ footer {
     padding: 45px 25px;
   }
 
-  footer {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* ================================
-   AWAKE JOURNEY
-   ================================ */
+  /* Journey */
 
-.journey-hero {
-  min-height: 78vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 120px 24px 100px;
-  text-align: center;
-}
-
-.journey-hero h1 {
-  margin: 18px 0 24px;
-  font-size: clamp(4rem, 10vw, 8rem);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  font-weight: 500;
-}
-
-.journey-intro {
-  max-width: 620px;
-  margin: 0 auto 36px;
-  font-size: 1.15rem;
-  line-height: 1.8;
-}
-
-.journey-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  padding: 14px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.journey-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
-
-/* Main journey sections */
-
-.journey-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 110px 24px;
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 80px;
-  align-items: start;
-}
-
-.journey-section h2 {
-  margin: 16px 0 0;
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-  font-weight: 500;
-}
-
-.journey-section p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-}
-
-.journey-section-alt {
-  max-width: none;
-  padding-left: max(24px, calc((100vw - 1100px) / 2));
-  padding-right: max(24px, calc((100vw - 1100px) / 2));
-}
-
-
-/* Journey stages */
-
-.journey-days {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.journey-days article {
-  padding: 32px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 24px;
-}
-
-.journey-days span {
-  display: block;
-  margin-bottom: 35px;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-}
-
-.journey-days h3 {
-  margin: 0 0 10px;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.journey-days p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-
-/* Closing section */
-
-.journey-closing {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 140px 24px;
-  text-align: center;
-}
-
-.journey-closing h2 {
-  margin: 20px 0 30px;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-  font-weight: 500;
-}
-
-.journey-closing p:last-child {
-  max-width: 520px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-
-/* Mobile */
-
-@media (max-width: 700px) {
   .journey-hero {
     min-height: 70vh;
     padding: 90px 20px 70px;
@@ -610,5 +925,111 @@ footer {
 
   .journey-closing {
     padding: 100px 20px;
+  }
+
+  /* Awake Day */
+
+  .day-hero {
+    padding: 80px 20px 75px;
+  }
+
+  .day-hero h1 {
+    font-size: clamp(48px, 15vw, 78px);
+  }
+
+  .day-hero .subtitle {
+    font-size: 19px;
+  }
+
+  .day-scripture {
+    padding: 80px 22px;
+  }
+
+  .day-scripture .quote-mark {
+    font-size: 60px;
+  }
+
+  .day-scripture p {
+    font-size: 30px;
+  }
+
+  .day-content {
+    display: block;
+    padding: 80px 24px;
+  }
+
+  .day-content .section-label {
+    margin-bottom: 35px;
+  }
+
+  .day-content article p {
+    font-size: 20px;
+    line-height: 1.65;
+    margin-bottom: 25px;
+  }
+
+  .truth-card {
+    padding: 70px 25px;
+  }
+
+  .truth-card h2 {
+    font-size: 34px;
+  }
+
+  .reflection-section {
+    display: block;
+    padding: 80px 24px;
+  }
+
+  .reflection-section h2 {
+    margin-bottom: 50px;
+    font-size: 34px;
+  }
+
+  .writing-line {
+    height: 44px;
+  }
+
+  .prayer-section {
+    padding: 80px 24px;
+  }
+
+  .prayer-section h2 {
+    font-size: 29px;
+    line-height: 1.45;
+  }
+
+  .respond-section {
+    padding: 80px 24px 90px;
+  }
+
+  .respond-section h2 {
+    font-size: 31px;
+  }
+
+  .response-box {
+    min-height: 160px;
+  }
+
+  .day-navigation {
+    padding: 45px 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .day-navigation .text-link {
+    align-self: center;
+  }
+
+  .day-navigation .primary-button {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* Footer */
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
   }
 }
