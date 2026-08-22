@@ -156,7 +156,7 @@ export default function JourneyPage() {
           you what needs to be seen.
         </p>
 
-        <Link href="/journey/day-01" className="primary-button">
+        <Link href="/journey/day/1" className="primary-button">
           Begin Day 01
           <span>→</span>
         </Link>
