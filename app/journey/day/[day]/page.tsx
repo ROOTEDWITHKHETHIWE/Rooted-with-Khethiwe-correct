@@ -87,14 +87,12 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <section className="truth-card">
         <p className="section-label">TODAY'S TRUTH</p>
-
         <h2>{currentDay.truth}</h2>
       </section>
 
       <section className="reflection-section">
         <div>
           <p className="section-label">REFLECT</p>
-
           <h2>{currentDay.reflection}</h2>
         </div>
 
@@ -110,7 +108,6 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <section className="prayer-section">
         <p className="section-label">PRAY</p>
-
         <h2>{currentDay.prayer}</h2>
       </section>
 
@@ -137,7 +134,6 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <footer>
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
