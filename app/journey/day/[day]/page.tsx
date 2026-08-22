@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { awakeDays } from "@/data/awake";
+import { awakeDays } from "../../../../data/awake";
 
 type PageProps = {
   params: Promise<{
@@ -137,7 +137,6 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <footer>
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
