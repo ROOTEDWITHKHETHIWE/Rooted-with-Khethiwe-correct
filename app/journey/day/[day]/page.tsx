@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { awakeDays } from "@/data/week";
+import { awakeDays } from "../../../../data/awake";
 
 type PageProps = {
   params: Promise<{
@@ -42,6 +42,7 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
   return (
     <main className="awake-page">
+
       <header className="topbar">
         <div className="brand">
           <span className="leaf">❧</span>
@@ -68,11 +69,14 @@ export default async function AwakeDayPage({ params }: PageProps) {
           <span>✦</span>
         </div>
 
-        <p className="subtitle">{currentDay.scripture}</p>
+        <p className="subtitle">
+          {currentDay.scripture}
+        </p>
       </section>
 
       <section className="day-scripture">
         <div className="scripture-inner">
+
           <span className="quote-mark">“</span>
 
           <p>
@@ -81,78 +85,134 @@ export default async function AwakeDayPage({ params }: PageProps) {
               : currentDay.scripture}
           </p>
 
-          <small>{currentDay.scripture}</small>
+          <small>
+            {currentDay.scripture}
+          </small>
+
         </div>
       </section>
 
       <section className="day-content">
+
         <div>
-          <p className="section-label">TODAY&apos;S TEACHING</p>
+          <p className="section-label">
+            TODAY&apos;S TEACHING
+          </p>
         </div>
 
         <article>
           {currentDay.teaching.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              {paragraph}
+            </p>
           ))}
         </article>
+
       </section>
 
       <section className="truth-card">
-        <p className="section-label">TODAY&apos;S TRUTH</p>
 
-        <h2>{currentDay.truth}</h2>
+        <p className="section-label">
+          TODAY&apos;S TRUTH
+        </p>
+
+        <h2>
+          {currentDay.truth}
+        </h2>
+
       </section>
 
       <section className="reflection-section">
-        <div>
-          <p className="section-label">REFLECT</p>
 
-          <h2>{currentDay.reflection}</h2>
+        <div>
+          <p className="section-label">
+            REFLECT
+          </p>
+
+          <h2>
+            {currentDay.reflection}
+          </h2>
         </div>
 
         <div className="reflection-space">
-          <p>Take a moment to answer honestly.</p>
+
+          <p>
+            Take a moment to answer honestly.
+          </p>
 
           <div className="writing-line" />
           <div className="writing-line" />
           <div className="writing-line" />
           <div className="writing-line" />
+
         </div>
+
       </section>
 
       <section className="prayer-section">
-        <p className="section-label">PRAY</p>
 
-        <h2>{currentDay.prayer}</h2>
+        <p className="section-label">
+          PRAY
+        </p>
+
+        <h2>
+          {currentDay.prayer}
+        </h2>
+
       </section>
 
       <section className="respond-section">
-        <p className="section-label">RESPOND</p>
 
-        <h2>{currentDay.response}</h2>
+        <p className="section-label">
+          RESPOND
+        </p>
+
+        <h2>
+          {currentDay.response}
+        </h2>
 
         <div className="response-box">
-          <span>Your response</span>
+          <span>
+            Your response
+          </span>
         </div>
+
       </section>
 
       <section className="day-navigation">
-        <Link href={previousDay} className="text-link">
+
+        <Link
+          href={previousDay}
+          className="text-link"
+        >
           ← Previous
         </Link>
 
-        <Link href={nextDay} className="primary-button">
+        <Link
+          href={nextDay}
+          className="primary-button"
+        >
           {dayNumber === 30
             ? "Complete the journey"
             : "Next day"}
+
           <span>→</span>
         </Link>
+
       </section>
 
       <footer>
-        <div className="footer-brand">MIDWEEK ROOTED</div>
-        <div>A monthly Scripture journey</div>
+
+        <div className="footer-brand">
+          MIDWEEK ROOTED
+        </div>
+
+        <div>
+          A monthly Scripture journey
+        </div>
+
       </footer>
+
     </main>
   );
 }
