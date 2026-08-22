@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { awakeDays } from "@/data/awake";
+import { awakeDays } from "@/data/week";
 
 type PageProps = {
   params: Promise<{
@@ -22,7 +22,9 @@ export default async function AwakeDayPage({ params }: PageProps) {
     notFound();
   }
 
-  const currentDay = awakeDays.find((item) => item.day === dayNumber);
+  const currentDay = awakeDays.find(
+    (item) => item.day === dayNumber
+  );
 
   if (!currentDay) {
     notFound();
@@ -85,7 +87,7 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <section className="day-content">
         <div>
-          <p className="section-label">TODAY'S TEACHING</p>
+          <p className="section-label">TODAY&apos;S TEACHING</p>
         </div>
 
         <article>
@@ -96,7 +98,7 @@ export default async function AwakeDayPage({ params }: PageProps) {
       </section>
 
       <section className="truth-card">
-        <p className="section-label">TODAY'S TRUTH</p>
+        <p className="section-label">TODAY&apos;S TRUTH</p>
 
         <h2>{currentDay.truth}</h2>
       </section>
@@ -149,7 +151,6 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       <footer>
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
