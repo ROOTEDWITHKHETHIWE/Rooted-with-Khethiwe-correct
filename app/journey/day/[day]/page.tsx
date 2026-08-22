@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { awakeDays } from "@/data/awake";
+import { awakeDays } from "@/data/week";
 
 type PageProps = {
   params: Promise<{
@@ -143,5 +143,3 @@ export default async function AwakeDayPage({ params }: PageProps) {
     </main>
   );
 }
-
-
