@@ -1,12 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { awakeDays } from "../../../../data/awake";
+import { awakeDays } from "@/data/awake";
 
 type PageProps = {
   params: Promise<{
     day: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return awakeDays.map((item) => ({
+    day: String(item.day),
+  }));
+}
 
 export default async function AwakeDayPage({ params }: PageProps) {
   const { day } = await params;
@@ -23,10 +29,14 @@ export default async function AwakeDayPage({ params }: PageProps) {
   }
 
   const previousDay =
-    dayNumber > 1 ? `/journey/day/${dayNumber - 1}` : "/journey";
+    dayNumber > 1
+      ? `/journey/day/${dayNumber - 1}`
+      : "/journey";
 
   const nextDay =
-    dayNumber < 30 ? `/journey/day/${dayNumber + 1}` : "/journey";
+    dayNumber < 30
+      ? `/journey/day/${dayNumber + 1}`
+      : "/journey";
 
   return (
     <main className="awake-page">
@@ -130,13 +140,16 @@ export default async function AwakeDayPage({ params }: PageProps) {
         </Link>
 
         <Link href={nextDay} className="primary-button">
-          {dayNumber === 30 ? "Complete the journey" : "Next day"}
+          {dayNumber === 30
+            ? "Complete the journey"
+            : "Next day"}
           <span>→</span>
         </Link>
       </section>
 
       <footer>
         <div className="footer-brand">MIDWEEK ROOTED</div>
+
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
