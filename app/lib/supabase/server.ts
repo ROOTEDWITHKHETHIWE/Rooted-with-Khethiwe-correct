@@ -12,14 +12,15 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll();
         },
+
         setAll(cookiesToSet) {
           try {
-            cookiesToSet.forEach(({ name, value, options }) =>
-              cookieStore.set(name, value, options)
-            );
+            cookiesToSet.forEach(({ name, value, options }) => {
+              cookieStore.set(name, value, options);
+            });
           } catch {
-            // Cookie updates can fail in Server Components.
-            // Middleware will refresh the session when needed.
+            // Cookie setting can fail in Server Components.
+            // Middleware will handle session refresh.
           }
         },
       },
