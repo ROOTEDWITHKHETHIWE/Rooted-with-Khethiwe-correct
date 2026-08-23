@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const days = Array.from({ length: 30 }, (_, index) => index + 1);
+
 export default function JourneyPage() {
   return (
     <main className="awake-page">
@@ -97,6 +99,88 @@ export default function JourneyPage() {
             This is not a challenge to complete as quickly as possible. It is
             an invitation to become increasingly responsive to God.
           </p>
+        </div>
+      </section>
+
+      {/* 30-DAY JOURNEY NAVIGATION */}
+      <section
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "1rem 1.5rem 5rem",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "2.5rem",
+          }}
+        >
+          <p className="section-label">THE AWAKE JOURNEY</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "1rem",
+            }}
+          >
+            Choose your day.
+          </h2>
+
+          <p
+            style={{
+              maxWidth: "560px",
+              margin: "0 auto",
+              lineHeight: "1.8",
+            }}
+          >
+            Move through the journey at your own pace. Select any day below
+            to enter directly into that day's reflection.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
+            gap: "1rem",
+          }}
+        >
+          {days.map((day) => (
+            <Link
+              key={day}
+              href={`/journey/day/${day}`}
+              style={{
+                display: "block",
+                border: "1px solid rgba(0,0,0,0.15)",
+                padding: "1.5rem 1rem",
+                textAlign: "center",
+                textDecoration: "none",
+                transition: "transform 0.2s ease",
+              }}
+            >
+              <span
+                style={{
+                  display: "block",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.14em",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                DAY
+              </span>
+
+              <strong
+                style={{
+                  display: "block",
+                  fontSize: "1.5rem",
+                  lineHeight: "1",
+                }}
+              >
+                {String(day).padStart(2, "0")}
+              </strong>
+            </Link>
+          ))}
         </div>
       </section>
 
