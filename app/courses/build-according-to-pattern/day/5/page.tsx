@@ -602,8 +602,9 @@ export default function DayFivePage() {
               gap: "1rem",
             }}
           >
+            {/* WORKBOOK */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -612,8 +613,9 @@ export default function DayFivePage() {
               <span>↗</span>
             </a>
 
+            {/* COURSE SLIDES / TEACHING MATERIAL */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -622,8 +624,9 @@ export default function DayFivePage() {
               <span>↗</span>
             </a>
 
+            {/* DAY 5 AUDIO */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1TTHvTWcBDpWcGdCYJe1StY0vS73ov8B3/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
