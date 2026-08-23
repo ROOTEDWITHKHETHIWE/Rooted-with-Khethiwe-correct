@@ -1,18 +1,23 @@
 import Link from "next/link";
 
-const availableCourse = {
-  title: "Build According to Pattern",
-  description:
-    "Learning to build according to what God has revealed and to remain faithful to His pattern.",
-  meta: "5-DAY COURSE",
-};
-
-const upcomingCourses = [
+const availableCourses = [
+  {
+    title: "Build According to Pattern",
+    description:
+      "Learning to build according to what God has revealed and to remain faithful to His pattern.",
+    meta: "5-DAY COURSE",
+    href: "/courses/build-according-to-pattern",
+  },
   {
     title: "Before the Assignment",
     description:
-      "Preparing yourself before stepping into what God has entrusted to you.",
+      "Preparing yourself to encounter God, receive His instruction, walk in consecration and faithfully carry what He has entrusted to you.",
+    meta: "5-DAY COURSE",
+    href: "/courses/before-the-assignment",
   },
+];
+
+const upcomingCourses = [
   {
     title: "From Revelation to Construction",
     description:
@@ -43,9 +48,7 @@ export default function CoursesPage() {
       <section className="journey-hero">
         <p className="small-label">ROOTED LEARNING</p>
 
-        <h1>
-          COURSES
-        </h1>
+        <h1>COURSES</h1>
 
         <div className="ornament">
           <span>✦</span>
@@ -141,7 +144,7 @@ export default function CoursesPage() {
           </p>
         </div>
 
-        {/* AVAILABLE COURSE */}
+        {/* AVAILABLE COURSES */}
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">AVAILABLE NOW</p>
 
@@ -156,48 +159,59 @@ export default function CoursesPage() {
 
           <div
             style={{
-              border: "1px solid rgba(0,0,0,0.15)",
-              padding: "2.5rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
             }}
           >
-            <p
-              style={{
-                fontSize: "0.75rem",
-                letterSpacing: "0.12em",
-                marginBottom: "1rem",
-              }}
-            >
-              {availableCourse.meta}
-            </p>
+            {availableCourses.map((course) => (
+              <div
+                key={course.title}
+                style={{
+                  border: "1px solid rgba(0,0,0,0.15)",
+                  padding: "2.5rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "0.75rem",
+                    letterSpacing: "0.12em",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  {course.meta}
+                </p>
 
-            <h3
-              style={{
-                fontSize: "2rem",
-                lineHeight: "1.2",
-                marginBottom: "1.25rem",
-              }}
-            >
-              {availableCourse.title}
-            </h3>
+                <h3
+                  style={{
+                    fontSize: "2rem",
+                    lineHeight: "1.2",
+                    marginBottom: "1.25rem",
+                  }}
+                >
+                  {course.title}
+                </h3>
 
-            <p
-              style={{
-                lineHeight: "1.9",
-                maxWidth: "600px",
-                marginBottom: "2rem",
-                textAlign: "justify",
-              }}
-            >
-              {availableCourse.description}
-            </p>
+                <p
+                  style={{
+                    lineHeight: "1.9",
+                    maxWidth: "600px",
+                    marginBottom: "2rem",
+                    textAlign: "justify",
+                  }}
+                >
+                  {course.description}
+                </p>
 
-            <Link
-              href="/courses/build-according-to-pattern"
-              className="primary-button"
-            >
-              Explore the course
-              <span>→</span>
-            </Link>
+                <Link
+                  href={course.href}
+                  className="primary-button"
+                >
+                  Explore the course
+                  <span>→</span>
+                </Link>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -284,7 +298,7 @@ export default function CoursesPage() {
               margin: "1.5rem auto",
             }}
           >
-            Don't just
+            Don&apos;t just
             <br />
             consume.
             <br />
