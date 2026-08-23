@@ -19,7 +19,6 @@ export default function DayOnePage() {
         </nav>
       </header>
 
-      {/* COURSE HEADER */}
       <section className="journey-hero">
         <p className="small-label">BUILD ACCORDING TO PATTERN</p>
 
@@ -42,7 +41,6 @@ export default function DayOnePage() {
         </p>
       </section>
 
-      {/* SCRIPTURE */}
       <section className="scripture">
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
@@ -56,7 +54,6 @@ export default function DayOnePage() {
         </div>
       </section>
 
-      {/* LESSON */}
       <section className="journey-closing">
         <p className="section-label">DAY 1 · THE LESSON</p>
 
@@ -70,11 +67,8 @@ export default function DayOnePage() {
 
         <div className="lesson-content">
           <p>
-            Before there was ever a tabernacle, there was a mountain.
-          </p>
-
-          <p>
-            Before there was a structure, there was a revelation.
+            Before there was ever a tabernacle, there was a mountain. Before
+            there was a structure, there was a revelation.
           </p>
 
           <p>
@@ -85,25 +79,15 @@ export default function DayOnePage() {
           </p>
 
           <p>
-            This is often the opposite of how we operate.
+            This is often the opposite of how we operate. When we feel
+            pressure, we move. When we see a need, we build. When we desire
+            change, we act.
           </p>
 
-          <p>
-            When we feel pressure, we move.
-            <br />
-            When we see a need, we build.
-            <br />
-            When we desire change, we act.
-          </p>
-
-          <p>
+          <p className="lesson-emphasis">
             But heaven's order is different.
-          </p>
-
-          <p>
-            <strong>God reveals.</strong>
             <br />
-            <strong>Then we build.</strong>
+            <strong>God reveals. Then we build.</strong>
           </p>
 
           <p>
@@ -134,17 +118,8 @@ export default function DayOnePage() {
           </p>
 
           <p>
-            Perhaps it is your home.
-            <br />
-            Your marriage.
-            <br />
-            Your motherhood.
-            <br />
-            Your work.
-            <br />
-            Your ministry.
-            <br />
-            Or simply the rhythms of your daily life.
+            Perhaps it is your home, your marriage, your motherhood, your work,
+            your ministry, or simply the rhythms of your daily life.
           </p>
 
           <p>
@@ -157,7 +132,6 @@ export default function DayOnePage() {
         </div>
       </section>
 
-      {/* DECLARATION */}
       <section className="scripture">
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
@@ -171,7 +145,6 @@ export default function DayOnePage() {
         </div>
       </section>
 
-      {/* RESOURCES */}
       <section className="journey-introduction">
         <p className="section-label">TODAY'S RESOURCES</p>
 
@@ -219,7 +192,6 @@ export default function DayOnePage() {
         </div>
       </section>
 
-      {/* NAVIGATION */}
       <section className="journey-closing">
         <p className="section-label">YOUR JOURNEY</p>
 
@@ -249,6 +221,57 @@ export default function DayOnePage() {
 
         <div>A monthly Scripture journey</div>
       </footer>
+
+      <style jsx>{`
+        .lesson-content {
+          max-width: 720px;
+          margin: 0 auto;
+          text-align: justify;
+          line-height: 1.9;
+        }
+
+        .lesson-content p {
+          margin-bottom: 1.8rem;
+        }
+
+        .lesson-content blockquote {
+          margin: 2.5rem auto;
+          max-width: 650px;
+          padding: 1.5rem 2rem;
+          text-align: center;
+          font-size: 1.2rem;
+          line-height: 1.7;
+        }
+
+        .lesson-emphasis {
+          text-align: center !important;
+          margin: 2.5rem auto !important;
+        }
+
+        .lesson-emphasis strong {
+          display: inline-block;
+          margin-top: 0.5rem;
+        }
+
+        .resource-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          max-width: 500px;
+          margin: 2rem auto 0;
+        }
+
+        @media (max-width: 700px) {
+          .lesson-content {
+            text-align: left;
+            line-height: 1.8;
+          }
+
+          .lesson-content blockquote {
+            padding: 1.25rem;
+          }
+        }
+      `}</style>
     </main>
   );
 }
