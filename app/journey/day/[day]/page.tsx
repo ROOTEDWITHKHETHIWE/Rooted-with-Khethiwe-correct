@@ -33,12 +33,12 @@ export default async function AwakeDayPage({ params }: PageProps) {
   const previousDay =
     dayNumber > 1
       ? `/journey/day/${dayNumber - 1}`
-      : "/journey";
+      : null;
 
   const nextDay =
     dayNumber < 30
       ? `/journey/day/${dayNumber + 1}`
-      : "/journey";
+      : null;
 
   return (
     <main className="awake-page">
@@ -179,25 +179,61 @@ export default async function AwakeDayPage({ params }: PageProps) {
 
       </section>
 
-      <section className="day-navigation">
+      {/* DAY NAVIGATION */}
+
+      <section
+        className="day-navigation"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1rem",
+          flexWrap: "wrap",
+        }}
+      >
+
+        {previousDay ? (
+          <Link
+            href={previousDay}
+            className="text-link"
+          >
+            ← Previous
+          </Link>
+        ) : (
+          <span
+            style={{
+              opacity: 0.35,
+              fontSize: "0.9rem",
+            }}
+          >
+            Beginning
+          </span>
+        )}
 
         <Link
-          href={previousDay}
-          className="text-link"
-        >
-          ← Previous
-        </Link>
-
-        <Link
-          href={nextDay}
+          href="/journey"
           className="primary-button"
         >
-          {dayNumber === 30
-            ? "Complete the journey"
-            : "Next day"}
-
-          <span>→</span>
+          All 30 Days
         </Link>
+
+        {nextDay ? (
+          <Link
+            href={nextDay}
+            className="primary-button"
+          >
+            Next Day
+            <span>→</span>
+          </Link>
+        ) : (
+          <Link
+            href="/journey"
+            className="primary-button"
+          >
+            Complete the journey
+            <span>→</span>
+          </Link>
+        )}
 
       </section>
 
