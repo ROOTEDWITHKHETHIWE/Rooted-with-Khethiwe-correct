@@ -6,7 +6,7 @@ export default function DayTwoPage() {
       <header className="topbar">
         <div className="brand">
           <span className="leaf">❧</span>
-          <span>MIDWEEK ROOTED</span>
+          <span>ACCORDING TO THE PATTERN</span>
           <span className="leaf">❧</span>
         </div>
 
@@ -19,9 +19,9 @@ export default function DayTwoPage() {
         </nav>
       </header>
 
-      {/* COURSE HEADER */}
+      {/* DAY HEADER */}
       <section className="journey-hero">
-        <p className="small-label">BUILD ACCORDING TO PATTERN</p>
+        <p className="small-label">BUILDING ACCORDING TO PATTERN</p>
 
         <h1>
           DAY 2
@@ -38,238 +38,477 @@ export default function DayTwoPage() {
         </div>
 
         <p className="subtitle">
-          Before God gave Moses a pattern,
+          Before God gives the pattern,
           <br />
-          He gave him an invitation.
+          He invites you closer.
         </p>
       </section>
 
-      {/* SCRIPTURE */}
-      <section className="scripture">
-        <div className="scripture-inner">
-          <span className="quote-mark">“</span>
-
-          <p>
-            Then the Lord said to Moses, “Come up to the Lord… and worship from
-            afar.”
-          </p>
-
-          <small>EXODUS 24:1 · NKJV</small>
-        </div>
-      </section>
-
-      {/* LESSON */}
-      <section className="journey-closing">
-        <p className="section-label">DAY 2 · THE LESSON</p>
-
-        <h2>
-          The mountain
-          <br />
-          comes before
-          <br />
-          the building.
-        </h2>
-
+      {/* MAIN LESSON */}
+      <section
+        style={{
+          maxWidth: "760px",
+          margin: "0 auto",
+          padding: "5rem 1.5rem",
+        }}
+      >
+        {/* KEY SCRIPTURE */}
         <div
-          className="lesson-content"
           style={{
-            maxWidth: "720px",
-            margin: "0 auto",
-            textAlign: "justify",
-            lineHeight: "1.9",
+            textAlign: "center",
+            marginBottom: "5rem",
           }}
         >
-          <p style={{ marginBottom: "1.8rem" }}>
-            Before God ever gave Moses a pattern, He gave him an invitation.
-            “Come up.”
-          </p>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            This is often where we miss God's order. We want answers. We want
-            clarity. We want instructions. We want to know what comes next.
-          </p>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            But God first calls us into His presence. The mountain came before
-            the blueprint. The encounter came before the assignment. The
-            relationship came before the responsibility.
-          </p>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            God could have spoken the pattern from a distance, but instead He
-            invited Moses closer.
-          </p>
+          <p className="section-label">KEY SCRIPTURE</p>
 
           <p
             style={{
-              margin: "2.5rem auto",
-              textAlign: "center",
+              fontSize: "1.35rem",
               lineHeight: "1.8",
-            }}
-          >
-            <strong>The pattern is revealed in proximity.</strong>
-          </p>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            Many of us are in seasons where we are asking, “Lord, what should I
-            do?”
-          </p>
-
-          <blockquote
-            style={{
-              margin: "2.5rem auto",
+              fontStyle: "italic",
               maxWidth: "650px",
-              padding: "1.5rem 2rem",
-              textAlign: "center",
-              lineHeight: "1.7",
+              margin: "1.5rem auto",
             }}
           >
-            Lord, where are You inviting me to come closer?
-          </blockquote>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            Sometimes we are frustrated because we feel delayed. But what if
-            the delay is actually an invitation? What if God is not withholding
-            direction? What if He is drawing you deeper into His presence
-            before releasing the next instruction?
+            “Then the Lord said to Moses, ‘Come up to the Lord… and worship
+            from afar.’”
           </p>
 
           <p
             style={{
-              margin: "2.5rem auto",
-              textAlign: "center",
-              lineHeight: "1.8",
+              fontSize: "0.8rem",
+              letterSpacing: "0.12em",
+              marginTop: "1.5rem",
             }}
           >
-            <strong>The mountain is not wasted time.</strong>
+            EXODUS 24:1 · NKJV
           </p>
+        </div>
 
-          <p style={{ marginBottom: "1.8rem" }}>
-            It is the place where distractions fall away, priorities are
-            reordered, hearts are refined, and heaven's perspective becomes
-            clear.
-          </p>
+        {/* TEACHING */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">TEACHING</p>
 
-          <p style={{ marginBottom: "1.8rem" }}>
-            Before Moses ever built the tabernacle, he first learned to ascend.
-            And before God entrusts us with what we are called to build, He
-            often invites us into deeper intimacy with Him.
-          </p>
-
-          <p style={{ marginBottom: "1.8rem" }}>
-            Today, resist the temptation to rush ahead.
-          </p>
-
-          <p
+          <h2
             style={{
-              margin: "2.5rem auto",
-              textAlign: "center",
-              lineHeight: "1.8",
+              marginBottom: "2.5rem",
+              lineHeight: "1.2",
             }}
           >
-            <strong>Let God set the pace.</strong>
-          </p>
+            The mountain
+            <br />
+            comes before
+            <br />
+            the building.
+          </h2>
 
-          <p style={{ marginBottom: "1.8rem" }}>
-            Allow Him to prepare you before He prepares the assignment.
-            Because what God builds through you must first be formed within
-            you.
-          </p>
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
+          >
+            <p style={{ marginBottom: "1.6rem" }}>
+              Before God ever gave Moses the pattern, He gave him an invitation.
+            </p>
+
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "1.2rem",
+                fontWeight: 600,
+                margin: "2rem 0",
+              }}
+            >
+              “Come up.”
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              This is the order of the Kingdom:
+            </p>
+
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "1.1rem",
+                lineHeight: "2",
+                margin: "2rem 0 2.5rem",
+              }}
+            >
+              <p>Invitation before instruction.</p>
+              <p>Presence before pattern.</p>
+              <p>Encounter before assignment.</p>
+            </div>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              We often want clarity, direction, and answers — but God first
+              calls us into communion.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              Because the pattern is not given at a distance. It is revealed in
+              proximity.
+            </p>
+
+            <p style={{ marginBottom: "0.7rem" }}>
+              The mountain represents the place where:
+            </p>
+
+            <ul
+              style={{
+                marginBottom: "1.8rem",
+                paddingLeft: "1.5rem",
+                lineHeight: "2",
+              }}
+            >
+              <li>distractions fall away</li>
+              <li>flesh is quieted</li>
+              <li>the voice of God becomes clear</li>
+            </ul>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              It is not convenient. It is not rushed. It is not surface-level.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              The mountain requires intentional ascent.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              And this is where many of us struggle.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              We want to build quickly. We want to move fast. We want to see
+              results.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              But God is not in a hurry.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              Because what He builds through you must first be formed in you.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              So before He entrusts you with structure, He invites you into
+              presence.
+            </p>
+
+            <p style={{ marginBottom: "1.6rem" }}>
+              Before He gives you instructions, He shapes your heart posture.
+            </p>
+
+            <p>
+              Before your hands are released to build, your spirit must learn
+              to remain.
+            </p>
+          </div>
         </div>
-      </section>
 
-      {/* DECLARATION */}
-      <section className="scripture">
-        <div className="scripture-inner">
-          <span className="quote-mark">“</span>
-
-          <p>
-            I will not build before I ascend. I will not move before I am
-            shown. I choose presence over pressure, and I build from encounter.
-          </p>
-
-          <small>TODAY'S DECLARATION</small>
-        </div>
-      </section>
-
-      {/* RESOURCES */}
-      <section className="journey-introduction">
-        <p className="section-label">TODAY'S RESOURCES</p>
-
-        <h2>
-          Continue
-          <br />
-          your study.
-        </h2>
-
-        <p>
-          Today's workbook and devotional lesson are available inside the
-          course. Take your time with the reflection questions and allow the
-          Lord to show you where He may be inviting you higher in this season.
-        </p>
-
+        {/* DEEP REVELATION */}
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-            maxWidth: "500px",
-            margin: "2rem auto 0",
+            marginBottom: "5rem",
+            padding: "2.5rem",
+            borderTop: "1px solid rgba(0,0,0,0.15)",
+            borderBottom: "1px solid rgba(0,0,0,0.15)",
           }}
         >
-          <a
-            href="https://drive.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-button"
-          >
-            Workbook
-            <span>↗</span>
-          </a>
+          <p className="section-label">DEEP REVELATION</p>
 
-          <a
-            href="https://drive.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-button"
+          <p
+            style={{
+              fontSize: "1.3rem",
+              lineHeight: "1.7",
+              fontWeight: 600,
+              marginBottom: "2rem",
+            }}
           >
-            Course Slides
-            <span>↗</span>
-          </a>
+            You cannot carry divine instruction without first being shaped by
+            divine presence.
+          </p>
 
-          <a
-            href="https://drive.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-button"
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
           >
-            Audio
-            <span>↗</span>
-          </a>
+            <p style={{ marginBottom: "1.5rem" }}>
+              The mountain is not just where you receive — it is where you are
+              transformed.
+            </p>
+
+            <p style={{ marginBottom: "1rem" }}>
+              It slows you down so heaven can download.
+            </p>
+
+            <p style={{ marginBottom: "1rem" }}>
+              It humbles you so you can hear clearly.
+            </p>
+
+            <p style={{ marginBottom: "1rem" }}>
+              It separates you so you can be refined.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              It draws you close so you can be trusted.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Many of us are frustrated because we feel stuck…
+            </p>
+
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "1.15rem",
+                fontWeight: 600,
+              }}
+            >
+              But what if you’re not stuck?
+              <br />
+              What if you’ve been invited up?
+            </p>
+          </div>
         </div>
-      </section>
 
-      {/* NAVIGATION */}
-      <section className="journey-closing">
-        <p className="section-label">YOUR JOURNEY</p>
+        {/* KEY INSIGHT */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">KEY INSIGHT</p>
 
-        <h2>
-          Keep
-          <br />
-          ascending.
-        </h2>
+          <p
+            style={{
+              fontSize: "1.3rem",
+              lineHeight: "1.7",
+              fontWeight: 600,
+              maxWidth: "650px",
+            }}
+          >
+            God is not preparing the assignment first. He is preparing you.
+          </p>
 
+          <p
+            style={{
+              lineHeight: "1.9",
+              textAlign: "justify",
+              marginTop: "1.5rem",
+            }}
+          >
+            Because a misaligned builder will mishandle a perfect pattern.
+          </p>
+        </div>
+
+        {/* REFLECTION */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">REFLECTION</p>
+
+          <h2 style={{ marginBottom: "2rem" }}>
+            Sit with this
+            <br />
+            honestly.
+          </h2>
+
+          <div style={{ lineHeight: "1.9" }}>
+            <p style={{ marginBottom: "1.5rem" }}>
+              Do I value the place of encounter more than the place of
+              execution?
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Have I been trying to build before receiving from God?
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              What is currently competing with my “mountain time”?
+            </p>
+
+            <p>
+              Am I willing to be slowed down, shaped, and separated by God?
+            </p>
+          </div>
+        </div>
+
+        {/* JOURNALING */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">JOURNALING SPACE</p>
+
+          <h2 style={{ marginBottom: "2rem" }}>
+            Come higher.
+            <br />
+            Listen deeper.
+          </h2>
+
+          <div style={{ lineHeight: "1.9" }}>
+            <p style={{ marginBottom: "1.5rem" }}>
+              Lord, what are You showing me that I have overlooked?
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              What does “coming up the mountain” look like practically in my
+              life right now?
+            </p>
+
+            <p>
+              Where are You calling me to deeper surrender and stillness?
+            </p>
+          </div>
+        </div>
+
+        {/* PRAYER */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">PRAYER</p>
+
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
+          >
+            <p style={{ marginBottom: "1.5rem" }}>Lord,</p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              draw me up the mountain.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Teach me to value Your presence more than my progress. Deliver me
+              from the urgency that pulls me out of alignment with You.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Slow me down where I need to be slowed. Quiet every voice that
+              competes with Yours.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Shape my heart in the place of encounter, so that what I build
+              reflects You and carries Your glory.
+            </p>
+
+            <p style={{ marginBottom: "1.5rem" }}>
+              Help me not to rush ahead of revelation, but to remain where You
+              are until You have fully shown me.
+            </p>
+
+            <p>
+              In Jesus’ name,
+              <br />
+              Amen.
+            </p>
+          </div>
+        </div>
+
+        {/* DECLARATION */}
         <div
           style={{
+            marginBottom: "5rem",
+            padding: "3rem 2rem",
+            textAlign: "center",
+            borderTop: "1px solid rgba(0,0,0,0.15)",
+            borderBottom: "1px solid rgba(0,0,0,0.15)",
+          }}
+        >
+          <p className="section-label">DECLARATION</p>
+
+          <p
+            style={{
+              fontSize: "1.3rem",
+              lineHeight: "1.8",
+              fontWeight: 600,
+              maxWidth: "650px",
+              margin: "1.5rem auto 0",
+            }}
+          >
+            I will not build before I ascend.
+            <br />
+            I will not move before I am shown.
+            <br />
+            I choose presence over pressure,
+            <br />
+            and I build from encounter.
+          </p>
+        </div>
+
+        {/* RESOURCES */}
+        <div style={{ marginBottom: "5rem" }}>
+          <p className="section-label">TODAY’S RESOURCES</p>
+
+          <h2 style={{ marginBottom: "1.5rem" }}>
+            Continue
+            <br />
+            your study.
+          </h2>
+
+          <p
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+              marginBottom: "2rem",
+            }}
+          >
+            Your workbook, course slides and audio will be available here as
+            you work through the course.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }}
+          >
+            <a
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Workbook
+              <span>↗</span>
+            </a>
+
+            <a
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Course Slides
+              <span>↗</span>
+            </a>
+
+            <a
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Audio
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        {/* NAVIGATION */}
+        <div
+          style={{
+            paddingTop: "3rem",
+            borderTop: "1px solid rgba(0,0,0,0.15)",
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
             gap: "1rem",
             flexWrap: "wrap",
           }}
         >
-          <Link href="/courses/build-according-to-pattern/day/1">
-            ← Day 1
+          <Link
+            href="/courses/build-according-to-pattern/day/1"
+            className="primary-button"
+          >
+            <span>←</span>
+            Day 1
           </Link>
 
           <Link
@@ -283,9 +522,9 @@ export default function DayTwoPage() {
       </section>
 
       <footer>
-        <div className="footer-brand">MIDWEEK ROOTED</div>
+        <div className="footer-brand">ACCORDING TO THE PATTERN</div>
 
-        <div>A monthly Scripture journey</div>
+        <div>Building according to what God has revealed.</div>
       </footer>
     </main>
   );
