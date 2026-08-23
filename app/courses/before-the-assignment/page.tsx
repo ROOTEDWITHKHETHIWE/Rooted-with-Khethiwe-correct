@@ -43,25 +43,142 @@ const days = [
 export default async function BeforeTheAssignmentPage() {
   const supabase = await createClient();
 
-  // Check whether the visitor is logged in.
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Not logged in → send them to the login page.
+  // Not logged in → send them to login.
   if (!user) {
     redirect("/login");
   }
 
-  // Check whether this user has access to Before the Assignment.
-  const { data: access } = await supabase
+  // Check course access.
+  const { data: access, error: accessError } = await supabase
     .from("course_access")
     .select("id")
     .eq("user_id", user.id)
     .eq("course_slug", "before-the-assignment")
     .maybeSingle();
 
-  // Logged in but no access → show the locked page.
+  // TEMPORARY DIAGNOSTIC
+  // This will tell us the actual Supabase error instead of showing
+  // the generic Vercel "Server Error".
+  if (accessError) {
+    return (
+      <main className="awake-page">
+        <header className="topbar">
+          <div className="brand">
+            <span className="leaf">❧</span>
+            <span>BEFORE THE ASSIGNMENT</span>
+            <span className="leaf">❧</span>
+          </div>
+
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/journey">Journey</Link>
+            <Link href="/courses">Courses</Link>
+            <Link href="/journal">Journal</Link>
+            <Link href="/library">Library</Link>
+          </nav>
+        </header>
+
+        <section className="journey-hero">
+          <p className="small-label">ROOTED · DIAGNOSTIC</p>
+
+          <h1>
+            COURSE
+            <br />
+            ACCESS
+            <br />
+            ERROR
+          </h1>
+
+          <div className="ornament">
+            <span>✦</span>
+          </div>
+
+          <p className="subtitle">
+            We found the gate.
+            <br />
+            Now we need to see what it is saying.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: "700px",
+            margin: "0 auto",
+            padding: "5rem 1.5rem",
+            textAlign: "center",
+          }}
+        >
+          <p className="section-label">SUPABASE RESPONSE</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "2rem",
+            }}
+          >
+            Something needs
+            <br />
+            our attention.
+          </h2>
+
+          <div
+            style={{
+              border: "1px solid rgba(0,0,0,0.15)",
+              padding: "2rem",
+              marginBottom: "2rem",
+              textAlign: "left",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "0.75rem",
+                letterSpacing: "0.12em",
+                marginBottom: "1rem",
+              }}
+            >
+              ERROR MESSAGE
+            </p>
+
+            <p
+              style={{
+                lineHeight: "1.8",
+                margin: 0,
+              }}
+            >
+              {accessError.message}
+            </p>
+          </div>
+
+          <p
+            style={{
+              fontSize: "0.8rem",
+              opacity: 0.65,
+              marginBottom: "2rem",
+            }}
+          >
+            Error code: {accessError.code || "Not provided"}
+          </p>
+
+          <Link href="/courses" className="primary-button">
+            Back to Courses
+            <span>→</span>
+          </Link>
+        </section>
+
+        <footer>
+          <div className="footer-brand">BEFORE THE ASSIGNMENT</div>
+
+          <div>Encounter. Consecration. Commission.</div>
+        </footer>
+      </main>
+    );
+  }
+
+  // Logged in but no course access.
   if (!access) {
     return (
       <main className="awake-page">
@@ -180,7 +297,6 @@ export default async function BeforeTheAssignmentPage() {
         </nav>
       </header>
 
-      {/* HERO */}
       <section className="journey-hero">
         <p className="small-label">A ROOTED 5-DAY JOURNEY</p>
 
@@ -205,7 +321,6 @@ export default async function BeforeTheAssignmentPage() {
         </p>
       </section>
 
-      {/* MAIN CONTENT */}
       <section
         style={{
           maxWidth: "760px",
@@ -213,7 +328,6 @@ export default async function BeforeTheAssignmentPage() {
           padding: "5rem 1.5rem",
         }}
       >
-        {/* INTRODUCTION */}
         <section
           style={{
             textAlign: "center",
@@ -274,7 +388,6 @@ export default async function BeforeTheAssignmentPage() {
           </div>
         </section>
 
-        {/* KEY SCRIPTURE */}
         <section
           style={{
             padding: "3rem 2rem",
@@ -303,7 +416,6 @@ export default async function BeforeTheAssignmentPage() {
           </div>
         </section>
 
-        {/* WHAT THIS JOURNEY IS ABOUT */}
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">WHAT YOU WILL EXPLORE</p>
 
@@ -345,7 +457,6 @@ export default async function BeforeTheAssignmentPage() {
           </div>
         </section>
 
-        {/* JOURNEY PROGRESSION */}
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">THE PROGRESSION</p>
 
@@ -359,34 +470,25 @@ export default async function BeforeTheAssignmentPage() {
             <p>
               <strong>Encounter</strong>
             </p>
-
             <p>↓</p>
-
             <p>
               <strong>Consecration</strong>
             </p>
-
             <p>↓</p>
-
             <p>
               <strong>Revelation</strong>
             </p>
-
             <p>↓</p>
-
             <p>
               <strong>Obedience</strong>
             </p>
-
             <p>↓</p>
-
             <p>
               <strong>Commission</strong>
             </p>
           </div>
         </section>
 
-        {/* DAYS */}
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">YOUR FIVE DAYS</p>
 
@@ -455,7 +557,6 @@ export default async function BeforeTheAssignmentPage() {
           </div>
         </section>
 
-        {/* IMPORTANT THOUGHT */}
         <section
           style={{
             padding: "3.5rem 2rem",
@@ -493,7 +594,6 @@ export default async function BeforeTheAssignmentPage() {
           </p>
         </section>
 
-        {/* CLOSING */}
         <section
           style={{
             textAlign: "center",
@@ -530,7 +630,6 @@ export default async function BeforeTheAssignmentPage() {
           </p>
         </section>
 
-        {/* NAVIGATION */}
         <div
           style={{
             paddingTop: "3rem",
