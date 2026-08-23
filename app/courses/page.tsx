@@ -2,28 +2,28 @@ import Link from "next/link";
 
 const courses = [
   {
+    title: "Build According to Pattern",
+    description:
+      "Learning to build according to what God has revealed and to remain faithful to His pattern.",
+    type: "COURSE",
+    status: "COMING SOON",
+    href: "/courses/build-according-to-pattern",
+  },
+  {
     title: "Before the Assignment",
     description:
-      "A journey of preparation for what God is building in you.",
+      "Preparing yourself before stepping into what God has entrusted to you.",
     type: "COURSE",
     status: "COMING SOON",
     href: "/courses/before-the-assignment",
   },
   {
-    title: "When Women Pray",
+    title: "From Revelation to Construction",
     description:
-      "A journey into prayer, surrender and the woman who learns to seek God.",
+      "Moving from what God has revealed to what you are called to build.",
     type: "COURSE",
     status: "COMING SOON",
-    href: "/courses/when-women-pray",
-  },
-  {
-    title: "Woman Restored",
-    description:
-      "A Bible study journey into restoration, identity and becoming whole in Christ.",
-    type: "BIBLE STUDY",
-    status: "COMING SOON",
-    href: "/courses/woman-restored",
+    href: "/courses/from-revelation-to-construction",
   },
 ];
 
