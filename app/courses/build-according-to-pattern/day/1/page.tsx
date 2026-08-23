@@ -19,6 +19,7 @@ export default function DayOnePage() {
         </nav>
       </header>
 
+      {/* COURSE HEADER */}
       <section className="journey-hero">
         <p className="small-label">BUILD ACCORDING TO PATTERN</p>
 
@@ -41,27 +42,23 @@ export default function DayOnePage() {
         </p>
       </section>
 
-      <section className="journey-introduction">
-        <p className="section-label">TODAY'S SCRIPTURE</p>
+      {/* SCRIPTURE */}
+      <section className="scripture">
+        <div className="scripture-inner">
+          <span className="quote-mark">“</span>
 
-        <h2>
-          According
-          <br />
-          to the pattern.
-        </h2>
+          <p>
+            And see to it that you make them according to the pattern which was
+            shown you on the mountain.
+          </p>
 
-        <p className="scripture-text">
-          “And see to it that you make them according to the pattern which was
-          shown you on the mountain.”
-        </p>
-
-        <small>EXODUS 25:40 · NKJV</small>
-
-        <div className="gold-line" />
+          <small>EXODUS 25:40 · NKJV</small>
+        </div>
       </section>
 
+      {/* LESSON */}
       <section className="journey-closing">
-        <p className="section-label">THE LESSON</p>
+        <p className="section-label">DAY 1 · THE LESSON</p>
 
         <h2>
           Before there was
@@ -99,7 +96,9 @@ export default function DayOnePage() {
             When we desire change, we act.
           </p>
 
-          <p>But heaven's order is different.</p>
+          <p>
+            But heaven's order is different.
+          </p>
 
           <p>
             <strong>God reveals.</strong>
@@ -148,74 +147,87 @@ export default function DayOnePage() {
             Or simply the rhythms of your daily life.
           </p>
 
-          <p>Whatever it is, remember this:</p>
+          <p>
+            Whatever it is, remember this:
+          </p>
 
           <blockquote>
             If God has shown it, He will sustain it.
           </blockquote>
         </div>
+      </section>
 
-        <div className="gold-line" />
-
-        <section className="scripture">
-          <div className="scripture-inner">
-            <span className="quote-mark">“</span>
-
-            <p>
-              I do not build from pressure — I build from revelation. I honour
-              God's pattern, and my life will carry His presence.
-            </p>
-
-            <small>TODAY'S DECLARATION</small>
-          </div>
-        </section>
-
-        <div className="lesson-resources">
-          <p className="section-label">TODAY'S RESOURCES</p>
-
-          <h2>
-            Continue
-            <br />
-            your study.
-          </h2>
+      {/* DECLARATION */}
+      <section className="scripture">
+        <div className="scripture-inner">
+          <span className="quote-mark">“</span>
 
           <p>
-            Use the workbook and course slides alongside today's lesson as you
-            reflect on what God is revealing to you.
+            I do not build from pressure — I build from revelation. I honour
+            God's pattern, and my life will carry His presence.
           </p>
 
-          <div className="resource-buttons">
-            <a
-              href="https://drive.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Open Workbook
-              <span>↗</span>
-            </a>
-
-            <a
-              href="https://drive.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Open Slides
-              <span>↗</span>
-            </a>
-
-            <a
-              href="https://drive.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Listen to Audio
-              <span>↗</span>
-            </a>
-          </div>
+          <small>TODAY'S DECLARATION</small>
         </div>
+      </section>
+
+      {/* RESOURCES */}
+      <section className="journey-introduction">
+        <p className="section-label">TODAY'S RESOURCES</p>
+
+        <h2>
+          Continue
+          <br />
+          your study.
+        </h2>
+
+        <p>
+          Use the workbook and course slides alongside today's lesson as you
+          reflect on what God is revealing to you.
+        </p>
+
+        <div className="resource-list">
+          <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button"
+          >
+            Workbook
+            <span>↗</span>
+          </a>
+
+          <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button"
+          >
+            Course Slides
+            <span>↗</span>
+          </a>
+
+          <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button"
+          >
+            Audio
+            <span>↗</span>
+          </a>
+        </div>
+      </section>
+
+      {/* NAVIGATION */}
+      <section className="journey-closing">
+        <p className="section-label">YOUR JOURNEY</p>
+
+        <h2>
+          Continue
+          <br />
+          building.
+        </h2>
 
         <div className="course-navigation">
           <Link href="/courses/build-according-to-pattern">
@@ -226,7 +238,7 @@ export default function DayOnePage() {
             href="/courses/build-according-to-pattern/day/2"
             className="primary-button"
           >
-            Continue to Day 2
+            Day 2
             <span>→</span>
           </Link>
         </div>
