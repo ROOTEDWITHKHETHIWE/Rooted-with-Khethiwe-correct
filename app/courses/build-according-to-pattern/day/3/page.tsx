@@ -448,8 +448,9 @@ export default function DayThreePage() {
               gap: "1rem",
             }}
           >
+            {/* WORKBOOK */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -458,8 +459,9 @@ export default function DayThreePage() {
               <span>↗</span>
             </a>
 
+            {/* TEACHING MATERIAL */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -468,13 +470,14 @@ export default function DayThreePage() {
               <span>↗</span>
             </a>
 
+            {/* DAY 3 AUDIO */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1pK_cY2u_YvfRbljCXNJSv3op7Wg4At7X/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
             >
-              Audio
+              Day 3 Audio
               <span>↗</span>
             </a>
           </div>
