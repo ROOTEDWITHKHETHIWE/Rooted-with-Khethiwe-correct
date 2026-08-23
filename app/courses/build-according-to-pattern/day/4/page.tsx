@@ -522,8 +522,9 @@ export default function DayFourPage() {
               gap: "1rem",
             }}
           >
+            {/* WORKBOOK */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -532,8 +533,9 @@ export default function DayFourPage() {
               <span>↗</span>
             </a>
 
+            {/* TEACHING MATERIAL */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -542,13 +544,14 @@ export default function DayFourPage() {
               <span>↗</span>
             </a>
 
+            {/* DAY 4 AUDIO */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1vNA4XQubUHTI8Vp3KTyaoaWIshJiyu7N/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
             >
-              Audio
+              Day 4 Audio
               <span>↗</span>
             </a>
           </div>
