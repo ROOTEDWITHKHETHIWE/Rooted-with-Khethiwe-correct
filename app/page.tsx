@@ -13,6 +13,7 @@ export default function Home() {
         <nav>
           <Link href="/">Home</Link>
           <Link href="/journey">Journey</Link>
+          <Link href="/courses">Courses</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/library">Library</Link>
         </nav>
@@ -133,13 +134,9 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand">
-          MIDWEEK ROOTED
-        </div>
+        <div className="footer-brand">MIDWEEK ROOTED</div>
 
-        <div>
-          A monthly Scripture journey
-        </div>
+        <div>A monthly Scripture journey</div>
       </footer>
     </main>
   );
