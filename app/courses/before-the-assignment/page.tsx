@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { createClient } from "@/app/lib/supabase/server";
 
 const days = [
   {
@@ -38,7 +40,128 @@ const days = [
   },
 ];
 
-export default function BeforeTheAssignmentPage() {
+export default async function BeforeTheAssignmentPage() {
+  const supabase = await createClient();
+
+  // Check whether the visitor is logged in.
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  // Not logged in → send them to the login page.
+  if (!user) {
+    redirect("/login");
+  }
+
+  // Check whether this user has access to Before the Assignment.
+  const { data: access } = await supabase
+    .from("course_access")
+    .select("id")
+    .eq("user_id", user.id)
+    .eq("course_slug", "before-the-assignment")
+    .maybeSingle();
+
+  // Logged in but no access → show the locked page.
+  if (!access) {
+    return (
+      <main className="awake-page">
+        <header className="topbar">
+          <div className="brand">
+            <span className="leaf">❧</span>
+            <span>BEFORE THE ASSIGNMENT</span>
+            <span className="leaf">❧</span>
+          </div>
+
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/journey">Journey</Link>
+            <Link href="/courses">Courses</Link>
+            <Link href="/journal">Journal</Link>
+            <Link href="/library">Library</Link>
+          </nav>
+        </header>
+
+        <section className="journey-hero">
+          <p className="small-label">ROOTED COURSE</p>
+
+          <h1>
+            BEFORE
+            <br />
+            THE
+            <br />
+            ASSIGNMENT
+          </h1>
+
+          <div className="ornament">
+            <span>✦</span>
+          </div>
+
+          <p className="subtitle">
+            This journey is reserved
+            <br />
+            for women with access.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: "650px",
+            margin: "0 auto",
+            padding: "5rem 1.5rem",
+            textAlign: "center",
+          }}
+        >
+          <p className="section-label">COURSE ACCESS</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "2rem",
+            }}
+          >
+            Your journey
+            <br />
+            is not unlocked yet.
+          </h2>
+
+          <p
+            style={{
+              lineHeight: "1.9",
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            You are signed in to your Rooted account, but this account does
+            not currently have access to Before the Assignment.
+          </p>
+
+          <p
+            style={{
+              lineHeight: "1.9",
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            If you previously purchased this course, please make sure you are
+            signed in with the email address connected to your access.
+          </p>
+
+          <Link href="/courses" className="primary-button">
+            Back to Courses
+            <span>→</span>
+          </Link>
+        </section>
+
+        <footer>
+          <div className="footer-brand">BEFORE THE ASSIGNMENT</div>
+
+          <div>Encounter. Consecration. Commission.</div>
+        </footer>
+      </main>
+    );
+  }
+
+  // User has access → show the actual course.
   return (
     <main className="awake-page">
       <header className="topbar">
@@ -215,8 +338,8 @@ export default function BeforeTheAssignmentPage() {
             </p>
 
             <p>
-              The goal is not simply to discover what God wants you to do.
-              It is to become the person who can faithfully carry what He has
+              The goal is not simply to discover what God wants you to do. It
+              is to become the person who can faithfully carry what He has
               entrusted to you.
             </p>
           </div>
@@ -323,10 +446,7 @@ export default function BeforeTheAssignmentPage() {
                   {day.description}
                 </p>
 
-                <Link
-                  href={day.href}
-                  className="primary-button"
-                >
+                <Link href={day.href} className="primary-button">
                   Begin {day.day.toLowerCase()}
                   <span>→</span>
                 </Link>
