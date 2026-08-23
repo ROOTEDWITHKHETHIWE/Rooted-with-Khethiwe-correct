@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 export default function LibraryPage() {
@@ -20,7 +19,7 @@ export default function LibraryPage() {
       </header>
 
       <section className="journey-hero">
-        <p className="small-label">COMING SOON</p>
+        <p className="small-label">THE ROOTED COLLECTION</p>
 
         <h1>LIBRARY</h1>
 
@@ -29,25 +28,27 @@ export default function LibraryPage() {
         </div>
 
         <p className="subtitle">
-          A growing collection of
+          Resources to help you
           <br />
-          Scripture journeys and resources.
+          remain rooted in Christ.
         </p>
       </section>
 
       <section className="journey-introduction">
-        <p className="section-label">THE ROOTED LIBRARY</p>
+        <p className="section-label">ROOTED RESOURCES</p>
 
         <h2>
-          More is
+          Read.
           <br />
-          coming.
+          Learn.
+          <br />
+          Grow.
         </h2>
 
         <p>
-          The Rooted Library will become a home for Scripture journeys,
-          devotionals, studies and resources created to help women grow
-          deeper, live faithfully and walk attentively with God.
+          Welcome to the Rooted Library. This is a growing collection of
+          Scripture resources, devotionals and practical tools created to help
+          you slow down, encounter God and live what you are learning.
         </p>
 
         <div className="gold-line" />
@@ -58,30 +59,29 @@ export default function LibraryPage() {
           <span className="quote-mark">“</span>
 
           <p>
-            The path of the righteous is like the light of dawn, that shines
-            more and more until the perfect day.
+            Let the word of Christ dwell in you richly.
           </p>
 
-          <small>PROVERBS 4:18 · WEB</small>
+          <small>COLOSSIANS 3:16 · WEB</small>
         </div>
       </section>
 
       <section className="journey-closing">
-        <p className="section-label">FOR NOW</p>
+        <p className="section-label">COMING TO THE LIBRARY</p>
 
         <h2>
-          Begin with
+          A place
           <br />
-          Awake.
+          to return to.
         </h2>
 
         <p>
-          While the library is being built, you can begin with our current
-          thirty-day Scripture journey.
+          Explore devotionals, Scripture journeys, journals and other Rooted
+          resources designed for your walk with God and your life at home.
         </p>
 
         <Link href="/journey" className="primary-button">
-          Explore Awake
+          Begin the Awake Journey
           <span>→</span>
         </Link>
       </section>
@@ -94,4 +94,3 @@ export default function LibraryPage() {
     </main>
   );
 }
-```
