@@ -1,3 +1,4 @@
+```tsx
 import Link from "next/link";
 
 export default function DayOnePage() {
@@ -19,7 +20,6 @@ export default function DayOnePage() {
         </nav>
       </header>
 
-      {/* DAY HEADER */}
       <section className="journey-hero">
         <p className="small-label">BUILDING ACCORDING TO PATTERN</p>
 
@@ -42,7 +42,6 @@ export default function DayOnePage() {
         </p>
       </section>
 
-      {/* MAIN LESSON */}
       <section
         style={{
           maxWidth: "760px",
@@ -50,7 +49,6 @@ export default function DayOnePage() {
           padding: "5rem 1.5rem",
         }}
       >
-        {/* KEY SCRIPTURE */}
         <div
           style={{
             textAlign: "center",
@@ -83,16 +81,10 @@ export default function DayOnePage() {
           </p>
         </div>
 
-        {/* TEACHING */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">TEACHING</p>
 
-          <h2
-            style={{
-              marginBottom: "2.5rem",
-              lineHeight: "1.2",
-            }}
-          >
+          <h2 style={{ marginBottom: "2.5rem", lineHeight: "1.2" }}>
             Before there was
             <br />
             a structure,
@@ -100,12 +92,7 @@ export default function DayOnePage() {
             there was a revelation.
           </h2>
 
-          <div
-            style={{
-              textAlign: "justify",
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.6rem" }}>
               Before there was ever a structure, there was a revelation.
             </p>
@@ -115,9 +102,7 @@ export default function DayOnePage() {
               him to be creative, innovative, or impressive.
             </p>
 
-            <p style={{ marginBottom: "1.6rem" }}>
-              He said:
-            </p>
+            <p style={{ marginBottom: "1.6rem" }}>He said:</p>
 
             <p
               style={{
@@ -151,9 +136,7 @@ export default function DayOnePage() {
               And this is where many of us get it wrong.
             </p>
 
-            <p style={{ marginBottom: "0.7rem" }}>
-              We start building:
-            </p>
+            <p style={{ marginBottom: "0.7rem" }}>We start building:</p>
 
             <ul
               style={{
@@ -217,13 +200,10 @@ export default function DayOnePage() {
               was not just a structure — it was a dwelling place.
             </p>
 
-            <p>
-              And God is intentional about where He dwells.
-            </p>
+            <p>And God is intentional about where He dwells.</p>
           </div>
         </div>
 
-        {/* DEEP REVELATION */}
         <div
           style={{
             marginBottom: "5rem",
@@ -245,12 +225,7 @@ export default function DayOnePage() {
             God will not commit His presence to what He did not design.
           </p>
 
-          <div
-            style={{
-              textAlign: "justify",
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.6rem" }}>
               You may be building something good… but is it God-breathed?
             </p>
@@ -261,7 +236,6 @@ export default function DayOnePage() {
           </div>
         </div>
 
-        {/* REFLECTION */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">REFLECTION</p>
 
@@ -271,11 +245,7 @@ export default function DayOnePage() {
             slowly.
           </h2>
 
-          <div
-            style={{
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.5rem" }}>
               What in my life have I started building without first seeking
               God’s pattern?
@@ -296,7 +266,6 @@ export default function DayOnePage() {
           </div>
         </div>
 
-        {/* JOURNALING */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">JOURNALING SPACE</p>
 
@@ -308,11 +277,7 @@ export default function DayOnePage() {
             Respond.
           </h2>
 
-          <div
-            style={{
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.5rem" }}>
               Lord, what have You shown me that I have ignored or delayed?
             </p>
@@ -321,22 +286,14 @@ export default function DayOnePage() {
               What does “the mountain” look like for me in this season?
             </p>
 
-            <p>
-              Where are You calling me back into alignment?
-            </p>
+            <p>Where are You calling me back into alignment?</p>
           </div>
         </div>
 
-        {/* PRAYER */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">PRAYER</p>
 
-          <div
-            style={{
-              textAlign: "justify",
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.5rem" }}>Lord,</p>
 
             <p style={{ marginBottom: "1.5rem" }}>
@@ -368,7 +325,6 @@ export default function DayOnePage() {
           </div>
         </div>
 
-        {/* DECLARATION */}
         <div
           style={{
             marginBottom: "5rem",
@@ -395,7 +351,7 @@ export default function DayOnePage() {
           </p>
         </div>
 
-        {/* RESOURCES */}
+        {/* TODAY'S RESOURCES */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">TODAY’S RESOURCES</p>
 
@@ -412,8 +368,8 @@ export default function DayOnePage() {
               marginBottom: "2rem",
             }}
           >
-            Your workbook, course slides and audio will be available here as
-            you work through the course.
+            Take your time with today’s teaching. Read through the material,
+            work through your workbook and listen to the Day 1 audio.
           </p>
 
           <div
@@ -424,7 +380,17 @@ export default function DayOnePage() {
             }}
           >
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Teaching Material
+              <span>↗</span>
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -434,28 +400,17 @@ export default function DayOnePage() {
             </a>
 
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1lGT78_vj3ZUMUkYCn5LGWJudhSWD7dW-/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
             >
-              Course Slides
-              <span>↗</span>
-            </a>
-
-            <a
-              href="https://drive.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Audio
+              Day 1 Audio
               <span>↗</span>
             </a>
           </div>
         </div>
 
-        {/* NEXT DAY */}
         <div
           style={{
             paddingTop: "3rem",
@@ -476,9 +431,9 @@ export default function DayOnePage() {
 
       <footer>
         <div className="footer-brand">ACCORDING TO THE PATTERN</div>
-
         <div>Building according to what God has revealed.</div>
       </footer>
     </main>
   );
 }
+```
