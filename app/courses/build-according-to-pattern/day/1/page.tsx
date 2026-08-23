@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 export default function DayOnePage() {
@@ -14,12 +13,13 @@ export default function DayOnePage() {
         <nav>
           <Link href="/">Home</Link>
           <Link href="/journey">Journey</Link>
+          <Link href="/courses">Courses</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/library">Library</Link>
-          <Link href="/courses">Courses</Link>
         </nav>
       </header>
 
+      {/* DAY HEADER */}
       <section className="journey-hero">
         <p className="small-label">BUILDING ACCORDING TO PATTERN</p>
 
@@ -49,6 +49,7 @@ export default function DayOnePage() {
           padding: "5rem 1.5rem",
         }}
       >
+        {/* KEY SCRIPTURE */}
         <div
           style={{
             textAlign: "center",
@@ -81,10 +82,16 @@ export default function DayOnePage() {
           </p>
         </div>
 
+        {/* TEACHING */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">TEACHING</p>
 
-          <h2 style={{ marginBottom: "2.5rem", lineHeight: "1.2" }}>
+          <h2
+            style={{
+              marginBottom: "2.5rem",
+              lineHeight: "1.2",
+            }}
+          >
             Before there was
             <br />
             a structure,
@@ -92,7 +99,12 @@ export default function DayOnePage() {
             there was a revelation.
           </h2>
 
-          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
+          >
             <p style={{ marginBottom: "1.6rem" }}>
               Before there was ever a structure, there was a revelation.
             </p>
@@ -204,6 +216,7 @@ export default function DayOnePage() {
           </div>
         </div>
 
+        {/* DEEP REVELATION */}
         <div
           style={{
             marginBottom: "5rem",
@@ -225,7 +238,12 @@ export default function DayOnePage() {
             God will not commit His presence to what He did not design.
           </p>
 
-          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
+          >
             <p style={{ marginBottom: "1.6rem" }}>
               You may be building something good… but is it God-breathed?
             </p>
@@ -236,6 +254,7 @@ export default function DayOnePage() {
           </div>
         </div>
 
+        {/* REFLECTION */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">REFLECTION</p>
 
@@ -266,6 +285,7 @@ export default function DayOnePage() {
           </div>
         </div>
 
+        {/* JOURNALING */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">JOURNALING SPACE</p>
 
@@ -286,14 +306,22 @@ export default function DayOnePage() {
               What does “the mountain” look like for me in this season?
             </p>
 
-            <p>Where are You calling me back into alignment?</p>
+            <p>
+              Where are You calling me back into alignment?
+            </p>
           </div>
         </div>
 
+        {/* PRAYER */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">PRAYER</p>
 
-          <div style={{ textAlign: "justify", lineHeight: "1.9" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              lineHeight: "1.9",
+            }}
+          >
             <p style={{ marginBottom: "1.5rem" }}>Lord,</p>
 
             <p style={{ marginBottom: "1.5rem" }}>
@@ -325,6 +353,7 @@ export default function DayOnePage() {
           </div>
         </div>
 
+        {/* DECLARATION */}
         <div
           style={{
             marginBottom: "5rem",
@@ -351,7 +380,7 @@ export default function DayOnePage() {
           </p>
         </div>
 
-        {/* TODAY'S RESOURCES */}
+        {/* RESOURCES */}
         <div style={{ marginBottom: "5rem" }}>
           <p className="section-label">TODAY’S RESOURCES</p>
 
@@ -368,8 +397,7 @@ export default function DayOnePage() {
               marginBottom: "2rem",
             }}
           >
-            Take your time with today’s teaching. Read through the material,
-            work through your workbook and listen to the Day 1 audio.
+            Continue with the workbook, teaching material and today’s audio.
           </p>
 
           <div
@@ -379,16 +407,6 @@ export default function DayOnePage() {
               gap: "1rem",
             }}
           >
-            <a
-              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Teaching Material
-              <span>↗</span>
-            </a>
-
             <a
               href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
@@ -400,17 +418,28 @@ export default function DayOnePage() {
             </a>
 
             <a
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Teaching Material
+              <span>↗</span>
+            </a>
+
+            <a
               href="https://drive.google.com/file/d/1lGT78_vj3ZUMUkYCn5LGWJudhSWD7dW-/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
             >
-              Day 1 Audio
+              Listen to Day 1
               <span>↗</span>
             </a>
           </div>
         </div>
 
+        {/* NEXT DAY */}
         <div
           style={{
             paddingTop: "3rem",
@@ -436,4 +465,3 @@ export default function DayOnePage() {
     </main>
   );
 }
-```
