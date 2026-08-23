@@ -460,8 +460,9 @@ export default function DayTwoPage() {
               gap: "1rem",
             }}
           >
+            {/* WORKBOOK */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1cNHsKmYQkAVCDKRS-XrumVJA35tHai7Q/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -470,8 +471,9 @@ export default function DayTwoPage() {
               <span>↗</span>
             </a>
 
+            {/* TEACHING MATERIAL */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1F4yQe2gnsflzvOgh-p1OLfoLyjVmSDZU/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -480,13 +482,14 @@ export default function DayTwoPage() {
               <span>↗</span>
             </a>
 
+            {/* DAY 2 AUDIO */}
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1_R4QKoc73ucHKhXhZx1MKk3ksEE-W8U8/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
             >
-              Audio
+              Day 2 Audio
               <span>↗</span>
             </a>
           </div>
