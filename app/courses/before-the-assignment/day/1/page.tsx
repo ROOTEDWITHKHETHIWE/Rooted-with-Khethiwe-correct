@@ -366,11 +366,7 @@ export default function DayOnePage() {
             preparing you?
           </h2>
 
-          <div
-            style={{
-              lineHeight: "1.9",
-            }}
-          >
+          <div style={{ lineHeight: "1.9" }}>
             <p style={{ marginBottom: "1.6rem" }}>
               Perhaps you are looking at your current season and wondering why
               things seem quieter than you expected.
@@ -526,7 +522,7 @@ export default function DayOnePage() {
             }}
           >
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1V6wFDDFvX01a4qbUR0Vd4wbSQwic-5jT/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -536,7 +532,7 @@ export default function DayOnePage() {
             </a>
 
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1V6wFDDFvX01a4qbUR0Vd4wbSQwic-5jT/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
@@ -546,7 +542,7 @@ export default function DayOnePage() {
             </a>
 
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1nOduCBKnYXSSv7ls8-NIQvEZs2vmN1c4/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button"
