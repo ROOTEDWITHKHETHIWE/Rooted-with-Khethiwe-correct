@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 export default function JournalPage() {
@@ -57,9 +56,7 @@ export default function JournalPage() {
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
 
-          <p>
-            Let the word of Christ dwell in you richly.
-          </p>
+          <p>Let the word of Christ dwell in you richly.</p>
 
           <small>COLOSSIANS 3:16 · WEB</small>
         </div>
@@ -95,10 +92,8 @@ export default function JournalPage() {
 
       <footer>
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
   );
 }
-```
