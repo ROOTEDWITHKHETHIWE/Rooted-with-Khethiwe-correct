@@ -13,6 +13,7 @@ export default function JournalPage() {
         <nav>
           <Link href="/">Home</Link>
           <Link href="/journey">Journey</Link>
+          <Link href="/courses">Courses</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/library">Library</Link>
         </nav>
