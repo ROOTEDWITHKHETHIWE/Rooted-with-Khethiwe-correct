@@ -65,68 +65,98 @@ export default function DayOnePage() {
           there was a mountain.
         </h2>
 
-        <div className="lesson-content">
-          <p>
+        <div
+          className="lesson-content"
+          style={{
+            maxWidth: "720px",
+            margin: "0 auto",
+            textAlign: "justify",
+            lineHeight: "1.9",
+          }}
+        >
+          <p style={{ marginBottom: "1.8rem" }}>
             Before there was ever a tabernacle, there was a mountain. Before
             there was a structure, there was a revelation.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             God did not ask Moses to invent something impressive. He did not
             ask him to build according to what was popular, efficient, or
             creative. He instructed him to build according to what had been
             shown to him.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             This is often the opposite of how we operate. When we feel
             pressure, we move. When we see a need, we build. When we desire
             change, we act.
           </p>
 
-          <p className="lesson-emphasis">
+          <p
+            style={{
+              margin: "2.5rem auto",
+              textAlign: "center",
+              lineHeight: "1.8",
+            }}
+          >
             But heaven's order is different.
             <br />
             <strong>God reveals. Then we build.</strong>
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             Many of us are carrying frustration because we have been trying to
             construct something that was never first revealed in the secret
             place. We have been building from pressure instead of revelation.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             Today, I want to encourage you to pause and ask yourself:
           </p>
 
-          <blockquote>
+          <blockquote
+            style={{
+              margin: "2.5rem auto",
+              maxWidth: "650px",
+              padding: "1.5rem 2rem",
+              textAlign: "center",
+              lineHeight: "1.7",
+            }}
+          >
             Am I building according to God's pattern, or am I building
             according to my own ideas?
           </blockquote>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             Because only what originates in God can truly carry His presence.
             The tabernacle was not just a structure. It was a dwelling place.
             And God is intentional about where He dwells.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             As you work through today's devotional and workbook, ask the Lord
             to show you any area of your life where He is calling you back into
             alignment.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             Perhaps it is your home, your marriage, your motherhood, your work,
             your ministry, or simply the rhythms of your daily life.
           </p>
 
-          <p>
+          <p style={{ marginBottom: "1.8rem" }}>
             Whatever it is, remember this:
           </p>
 
-          <blockquote>
+          <blockquote
+            style={{
+              margin: "2.5rem auto",
+              maxWidth: "650px",
+              padding: "1.5rem 2rem",
+              textAlign: "center",
+              lineHeight: "1.7",
+            }}
+          >
             If God has shown it, He will sustain it.
           </blockquote>
         </div>
@@ -159,7 +189,15 @@ export default function DayOnePage() {
           reflect on what God is revealing to you.
         </p>
 
-        <div className="resource-list">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            maxWidth: "500px",
+            margin: "2rem auto 0",
+          }}
+        >
           <a
             href="https://drive.google.com/"
             target="_blank"
@@ -201,7 +239,15 @@ export default function DayOnePage() {
           building.
         </h2>
 
-        <div className="course-navigation">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "1rem",
+            flexWrap: "wrap",
+          }}
+        >
           <Link href="/courses/build-according-to-pattern">
             ← Course Overview
           </Link>
@@ -221,57 +267,6 @@ export default function DayOnePage() {
 
         <div>A monthly Scripture journey</div>
       </footer>
-
-      <style jsx>{`
-        .lesson-content {
-          max-width: 720px;
-          margin: 0 auto;
-          text-align: justify;
-          line-height: 1.9;
-        }
-
-        .lesson-content p {
-          margin-bottom: 1.8rem;
-        }
-
-        .lesson-content blockquote {
-          margin: 2.5rem auto;
-          max-width: 650px;
-          padding: 1.5rem 2rem;
-          text-align: center;
-          font-size: 1.2rem;
-          line-height: 1.7;
-        }
-
-        .lesson-emphasis {
-          text-align: center !important;
-          margin: 2.5rem auto !important;
-        }
-
-        .lesson-emphasis strong {
-          display: inline-block;
-          margin-top: 0.5rem;
-        }
-
-        .resource-list {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          max-width: 500px;
-          margin: 2rem auto 0;
-        }
-
-        @media (max-width: 700px) {
-          .lesson-content {
-            text-align: left;
-            line-height: 1.8;
-          }
-
-          .lesson-content blockquote {
-            padding: 1.25rem;
-          }
-        }
-      `}</style>
     </main>
   );
 }
