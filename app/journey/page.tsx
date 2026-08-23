@@ -2,6 +2,25 @@ import Link from "next/link";
 
 const days = Array.from({ length: 30 }, (_, index) => index + 1);
 
+const weeklyTeachings = [
+  {
+    week: "WEEK ONE",
+    title: "Returning to Attention",
+    description:
+      "Begin the journey by slowing down, becoming attentive, and returning your heart to what God is saying.",
+    audio:
+      "https://drive.google.com/file/d/1xE4Zjdf7uKlHemkVpLXd6ItMniCGSs9S/view?usp=drivesdk",
+  },
+  {
+    week: "WEEK TWO",
+    title: "Continuing the Journey",
+    description:
+      "Continue deeper into the journey with this week's teaching and allow God to speak into what He is revealing.",
+    audio:
+      "https://drive.google.com/file/d/1oCHCeWqu2zV717xg-OSyvIxnDOX5dYc7/view?usp=drivesdk",
+  },
+];
+
 export default function JourneyPage() {
   return (
     <main className="awake-page">
@@ -180,6 +199,99 @@ export default function JourneyPage() {
                 {String(day).padStart(2, "0")}
               </strong>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* WEEKLY TEACHINGS */}
+      <section
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "1rem 1.5rem 5rem",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "2.5rem",
+          }}
+        >
+          <p className="section-label">WEEKLY TEACHING</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "1rem",
+            }}
+          >
+            Go deeper into the journey.
+          </h2>
+
+          <p
+            style={{
+              maxWidth: "560px",
+              margin: "0 auto",
+              lineHeight: "1.8",
+            }}
+          >
+            Each week, listen to the teaching that accompanies your journey.
+            Take your time, listen prayerfully, and return whenever you need
+            to.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          {weeklyTeachings.map((teaching) => (
+            <article
+              key={teaching.week}
+              style={{
+                border: "1px solid rgba(0,0,0,0.15)",
+                padding: "2rem",
+              }}
+            >
+              <p
+                className="section-label"
+                style={{
+                  marginBottom: "0.75rem",
+                }}
+              >
+                {teaching.week}
+              </p>
+
+              <h3
+                style={{
+                  marginBottom: "1rem",
+                }}
+              >
+                {teaching.title}
+              </h3>
+
+              <p
+                style={{
+                  lineHeight: "1.8",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                {teaching.description}
+              </p>
+
+              <a
+                href={teaching.audio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="primary-button"
+              >
+                Listen to the teaching
+                <span>→</span>
+              </a>
+            </article>
           ))}
         </div>
       </section>
