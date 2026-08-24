@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 const teachingSeries = [
@@ -177,15 +176,12 @@ export default function LibraryPage() {
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
 
-          <p>
-            Let the word of Christ dwell in you richly.
-          </p>
+          <p>Let the word of Christ dwell in you richly.</p>
 
           <small>COLOSSIANS 3:16 · WEB</small>
         </div>
       </section>
 
-      {/* TEACHING SERIES */}
       <section
         style={{
           maxWidth: "1000px",
@@ -299,7 +295,6 @@ export default function LibraryPage() {
         </div>
       </section>
 
-      {/* MORE ROOTED RESOURCES */}
       <section className="journey-stages">
         <p className="section-label">MORE TO COME</p>
 
@@ -372,4 +367,3 @@ export default function LibraryPage() {
     </main>
   );
 }
-```
