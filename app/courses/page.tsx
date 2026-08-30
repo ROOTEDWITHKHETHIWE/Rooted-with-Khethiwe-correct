@@ -15,6 +15,13 @@ const availableCourses = [
     meta: "5-DAY COURSE",
     href: "/courses/before-the-assignment",
   },
+  {
+    title: "Rosh Hashanah Journey",
+    description:
+      "A five-day devotional journey of awakening, remembrance, repentance, preparation and crossing into the new year attentive to God.",
+    meta: "5-DAY JOURNEY",
+    href: "/courses/rosh-hashanah",
+  },
 ];
 
 const upcomingCourses = [
@@ -203,10 +210,7 @@ export default function CoursesPage() {
                   {course.description}
                 </p>
 
-                <Link
-                  href={course.href}
-                  className="primary-button"
-                >
+                <Link href={course.href} className="primary-button">
                   Explore the course
                   <span>→</span>
                 </Link>
