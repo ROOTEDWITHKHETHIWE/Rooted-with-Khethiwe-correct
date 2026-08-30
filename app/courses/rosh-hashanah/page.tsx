@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { createClient } from "@/app/lib/supabase/server";
 
 const journeyDays = [
   {
@@ -50,13 +52,209 @@ const introductionAudio =
 const devotionalPdf =
   "https://drive.google.com/file/d/1E9AN21fgHKL-MudModhbz7B_MMqZtiqu/view?usp=drive_link";
 
-export default function RoshHashanahPage() {
+export default async function RoshHashanahPage() {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  // Not signed in → send to the existing Rooted login.
+  if (!user) {
+    redirect("/login");
+  }
+
+  // Check whether this Rooted account owns Rosh Hashanah.
+  const { data: access, error: accessError } = await supabase
+    .from("course_access")
+    .select("id")
+    .eq("user_id", user.id)
+    .eq("course_slug", "rosh-hashanah")
+    .maybeSingle();
+
+  // If Supabase itself returns an error, do not expose the paid content.
+  if (accessError) {
+    return (
+      <main className="awake-page">
+        <header className="topbar">
+          <div className="brand">
+            <span className="leaf">❧</span>
+            <span>ROSH HASHANAH</span>
+            <span className="leaf">❧</span>
+          </div>
+
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/journey">Journey</Link>
+            <Link href="/courses">Courses</Link>
+            <Link href="/journal">Journal</Link>
+            <Link href="/library">Library</Link>
+          </nav>
+        </header>
+
+        <section className="journey-hero">
+          <p className="small-label">ROOTED COURSE</p>
+
+          <h1>ROSH HASHANAH</h1>
+
+          <div className="ornament">
+            <span>✦</span>
+          </div>
+
+          <p className="subtitle">
+            We couldn&apos;t confirm
+            <br />
+            your course access.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: "650px",
+            margin: "0 auto",
+            padding: "5rem 1.5rem",
+            textAlign: "center",
+          }}
+        >
+          <p className="section-label">COURSE ACCESS</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "2rem",
+            }}
+          >
+            Something needs
+            <br />
+            our attention.
+          </h2>
+
+          <p
+            style={{
+              lineHeight: "1.9",
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            We could not confirm your access to this journey right now. Please
+            try again shortly.
+          </p>
+
+          <Link href="/courses" className="primary-button">
+            Back to Courses
+            <span>→</span>
+          </Link>
+        </section>
+
+        <footer>
+          <div className="footer-brand">ROSH HASHANAH</div>
+          <div>Awake. Remember. Prepare.</div>
+        </footer>
+      </main>
+    );
+  }
+
+  // Signed in, but this account has not purchased/unlocked Rosh Hashanah.
+  if (!access) {
+    return (
+      <main className="awake-page">
+        <header className="topbar">
+          <div className="brand">
+            <span className="leaf">❧</span>
+            <span>ROSH HASHANAH</span>
+            <span className="leaf">❧</span>
+          </div>
+
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/journey">Journey</Link>
+            <Link href="/courses">Courses</Link>
+            <Link href="/journal">Journal</Link>
+            <Link href="/library">Library</Link>
+          </nav>
+        </header>
+
+        <section className="journey-hero">
+          <p className="small-label">A FIVE-DAY JOURNEY</p>
+
+          <h1>ROSH HASHANAH</h1>
+
+          <div className="ornament">
+            <span>✦</span>
+          </div>
+
+          <p className="subtitle">
+            This journey is reserved
+            <br />
+            for women with access.
+          </p>
+        </section>
+
+        <section
+          style={{
+            maxWidth: "650px",
+            margin: "0 auto",
+            padding: "5rem 1.5rem",
+            textAlign: "center",
+          }}
+        >
+          <p className="section-label">COURSE ACCESS</p>
+
+          <h2
+            style={{
+              lineHeight: "1.2",
+              marginBottom: "2rem",
+            }}
+          >
+            Your journey
+            <br />
+            is not unlocked yet.
+          </h2>
+
+          <p
+            style={{
+              lineHeight: "1.9",
+              maxWidth: "560px",
+              margin: "0 auto 2rem",
+            }}
+          >
+            You are signed in to your Rooted account, but this account does
+            not currently have access to the Rosh Hashanah Journey.
+          </p>
+
+          <p
+            style={{
+              lineHeight: "1.9",
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            If you have already paid for this devotional, please make sure you
+            are signed in with the email address you used when requesting
+            access.
+          </p>
+
+          <Link href="/courses" className="primary-button">
+            Back to Courses
+            <span>→</span>
+          </Link>
+        </section>
+
+        <footer>
+          <div className="footer-brand">ROSH HASHANAH</div>
+          <div>Awake. Remember. Prepare.</div>
+        </footer>
+      </main>
+    );
+  }
+
+  // Access confirmed → paid content can now render.
   return (
     <main className="awake-page">
       <header className="topbar">
         <div className="brand">
           <span className="leaf">❧</span>
-          <span>MIDWEEK ROOTED</span>
+          <span>ROSH HASHANAH</span>
           <span className="leaf">❧</span>
         </div>
 
@@ -91,7 +289,9 @@ export default function RoshHashanahPage() {
           <span>❀</span>
         </div>
 
-        <p className="hero-note">5 DAYS · SCRIPTURE · AUDIO · REFLECTION</p>
+        <p className="hero-note">
+          5 DAYS · SCRIPTURE · AUDIO · REFLECTION
+        </p>
       </section>
 
       {/* INTRODUCTION */}
@@ -180,9 +380,9 @@ export default function RoshHashanahPage() {
               lineHeight: "1.9",
             }}
           >
-            Begin with the introductory teaching, then keep the full devotional
-            close throughout the five days. The devotional is your written
-            companion for Scripture, reflection and prayer.
+            Begin with the introductory teaching, then keep the full
+            devotional close throughout the five days. The devotional is your
+            written companion for Scripture, reflection and prayer.
           </p>
         </div>
 
@@ -394,9 +594,7 @@ export default function RoshHashanahPage() {
           <article>
             <span>01</span>
             <h3>Awaken</h3>
-            <p>
-              Become attentive again to the voice and movement of God.
-            </p>
+            <p>Become attentive again to the voice and movement of God.</p>
           </article>
 
           <article>
@@ -453,11 +651,7 @@ export default function RoshHashanahPage() {
           <span>→</span>
         </a>
 
-        <div
-          style={{
-            marginTop: "2rem",
-          }}
-        >
+        <div style={{ marginTop: "2rem" }}>
           <Link href="/courses" className="text-link">
             ← Back to courses
           </Link>
@@ -465,9 +659,8 @@ export default function RoshHashanahPage() {
       </section>
 
       <footer>
-        <div className="footer-brand">MIDWEEK ROOTED</div>
-
-        <div>A monthly Scripture journey</div>
+        <div className="footer-brand">ROSH HASHANAH</div>
+        <div>Awake. Remember. Prepare.</div>
       </footer>
     </main>
   );
