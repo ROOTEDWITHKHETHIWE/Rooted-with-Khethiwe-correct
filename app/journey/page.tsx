@@ -19,6 +19,14 @@ const weeklyTeachings = [
     audio:
       "https://drive.google.com/file/d/1oCHCeWqu2zV717xg-OSyvIxnDOX5dYc7/view?usp=drivesdk",
   },
+  {
+    week: "WEEK THREE",
+    title: "Watch and Prepare",
+    description:
+      "This week, we become watchful and intentional. We allow God to prepare our hearts, sharpen our discernment, and teach us how to remain awake as we approach the threshold ahead.",
+    audio:
+      "https://drive.google.com/file/d/1qlLZ7iRkm-xCD5ed4Q1zpZ7cd7ra7vOr/view?usp=drive_link",
+  },
 ];
 
 export default function JourneyPage() {
@@ -305,9 +313,7 @@ export default function JourneyPage() {
           <article>
             <span>01</span>
             <h3>Listen</h3>
-            <p>
-              Before we move, we learn to listen for the voice of God.
-            </p>
+            <p>Before we move, we learn to listen for the voice of God.</p>
           </article>
 
           <article>
