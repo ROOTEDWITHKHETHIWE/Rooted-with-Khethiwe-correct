@@ -8,9 +8,9 @@
  *   characters each to control prompt size.
  */
 
-const fs = require("fs");
-const { getOctokit } = require("@actions/github");
-const OpenAI = require("openai");
+import fs from "fs";
+import { getOctokit } from "@actions/github";
+import OpenAI from "openai";
 
 async function main() {
   try {
