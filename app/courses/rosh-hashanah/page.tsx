@@ -5,52 +5,61 @@ import { createClient } from "@/app/lib/supabase/server";
 const journeyDays = [
   {
     day: "DAY ONE",
+    dayNumber: 1,
     title: "Awaken",
     description:
       "Begin the journey by becoming attentive to the sound of God again. Slow down, listen and allow Him to awaken what has become quiet within you.",
     audio:
-      "https://drive.google.com/file/d/1LoB2pgWXy-oIjkK2ATgF1rL91R0qd25U/view?usp=drive_link",
+      "https://drive.google.com/file/d/1LoB2pgWXy-oIjkK2ATgF1rL9lR0qd25U/view?usp=drivesdk",
     available: true,
   },
   {
     day: "DAY TWO",
+    dayNumber: 2,
     title: "Remember",
     description:
       "Return to what God has spoken, remember His faithfulness and allow remembrance to restore perspective.",
-    audio: "",
-    available: false,
+    audio:
+      "https://drive.google.com/file/d/1YAe4dp0JW7ZUupYyYlO9aPuuo-17yoJf/view?usp=drivesdk",
+    available: true,
   },
   {
     day: "DAY THREE",
+    dayNumber: 3,
     title: "Return",
     description:
       "Allow God to search the heart. Return through repentance, surrender and renewed obedience.",
-    audio: "",
-    available: false,
+    audio:
+      "https://drive.google.com/file/d/10Ggp5bBy8uLZXC87SsCN076Ou3tm5Fxq/view?usp=drivesdk",
+    available: true,
   },
   {
     day: "DAY FOUR",
+    dayNumber: 4,
     title: "Prepare",
     description:
       "Make room for what lies ahead. Release what cannot cross with you and prepare to walk forward with God.",
-    audio: "",
-    available: false,
+    audio:
+      "https://drive.google.com/file/d/11QLtbE73NcyDMnB4cJ-F7VBF00GvycIg/view?usp=drivesdk",
+    available: true,
   },
   {
     day: "DAY FIVE",
+    dayNumber: 5,
     title: "Cross the Threshold",
     description:
       "Stand at the threshold prayerfully and enter the next season awake, surrendered and attentive to God.",
-    audio: "",
-    available: false,
+    audio:
+      "https://drive.google.com/file/d/1-rOJiTnQIFzJUyILeUor85BK_9LMTWpt/view?usp=drivesdk",
+    available: true,
   },
 ];
 
 const introductionAudio =
-  "https://drive.google.com/file/d/1F2rmTJ56BWT0XRIDE5N9IIeFo0q0ZCFt/view?usp=drive_link";
+  "https://drive.google.com/file/d/1F2rmTJ56BWT0XRIDE5N9IIeFoOqOZCFt/view?usp=drivesdk";
 
 const devotionalPdf =
-  "https://drive.google.com/file/d/1E9AN21fgHKL-MudModhbz7B_MMqZtiqu/view?usp=drive_link";
+  "https://drive.google.com/file/d/1E9AN21fgHKL-MudModhbz7B_MMqZtiqu/view?usp=drivesdk";
 
 export default async function RoshHashanahPage() {
   const supabase = await createClient();
@@ -565,7 +574,7 @@ export default async function RoshHashanahPage() {
                   rel="noopener noreferrer"
                   className="primary-button"
                 >
-                  Listen to Day 1
+                  Listen to Day {item.dayNumber}
                   <span>→</span>
                 </a>
               ) : (
@@ -620,6 +629,14 @@ export default async function RoshHashanahPage() {
             <h3>Prepare</h3>
             <p>
               Make room in your heart for what God is calling you into next.
+            </p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <h3>Cross the Threshold</h3>
+            <p>
+              Enter the next season awake, surrendered and attentive to God.
             </p>
           </article>
         </div>
