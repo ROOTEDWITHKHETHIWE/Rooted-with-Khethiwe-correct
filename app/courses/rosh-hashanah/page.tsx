@@ -1,65 +1,11 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/app/lib/supabase/server";
-
-const journeyDays = [
-  {
-    day: "DAY ONE",
-    dayNumber: 1,
-    title: "Awaken",
-    description:
-      "Begin the journey by becoming attentive to the sound of God again. Slow down, listen and allow Him to awaken what has become quiet within you.",
-    audio:
-      "https://drive.google.com/file/d/1LoB2pgWXy-oIjkK2ATgF1rL9lR0qd25U/view?usp=drivesdk",
-    available: true,
-  },
-  {
-    day: "DAY TWO",
-    dayNumber: 2,
-    title: "Remember",
-    description:
-      "Return to what God has spoken, remember His faithfulness and allow remembrance to restore perspective.",
-    audio:
-      "https://drive.google.com/file/d/1YAe4dp0JW7ZUupYyYlO9aPuuo-17yoJf/view?usp=drivesdk",
-    available: true,
-  },
-  {
-    day: "DAY THREE",
-    dayNumber: 3,
-    title: "Return",
-    description:
-      "Allow God to search the heart. Return through repentance, surrender and renewed obedience.",
-    audio:
-      "https://drive.google.com/file/d/10Ggp5bBy8uLZXC87SsCN076Ou3tm5Fxq/view?usp=drivesdk",
-    available: true,
-  },
-  {
-    day: "DAY FOUR",
-    dayNumber: 4,
-    title: "Prepare",
-    description:
-      "Make room for what lies ahead. Release what cannot cross with you and prepare to walk forward with God.",
-    audio:
-      "https://drive.google.com/file/d/11QLtbE73NcyDMnB4cJ-F7VBF00GvycIg/view?usp=drivesdk",
-    available: true,
-  },
-  {
-    day: "DAY FIVE",
-    dayNumber: 5,
-    title: "Cross the Threshold",
-    description:
-      "Stand at the threshold prayerfully and enter the next season awake, surrendered and attentive to God.",
-    audio:
-      "https://drive.google.com/file/d/1-rOJiTnQIFzJUyILeUor85BK_9LMTWpt/view?usp=drivesdk",
-    available: true,
-  },
-];
-
-const introductionAudio =
-  "https://drive.google.com/file/d/1F2rmTJ56BWT0XRIDE5N9IIeFoOqOZCFt/view?usp=drivesdk";
-
-const devotionalPdf =
-  "https://drive.google.com/file/d/1E9AN21fgHKL-MudModhbz7B_MMqZtiqu/view?usp=drivesdk";
+import {
+  devotionalPdf,
+  introductionAudio,
+  roshHashanahDays,
+} from "@/data/roshHashanah";
 
 export default async function RoshHashanahPage() {
   const supabase = await createClient();
@@ -68,12 +14,12 @@ export default async function RoshHashanahPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Not signed in → send to the existing Rooted login.
+  // Not signed in → send to Rooted login.
   if (!user) {
     redirect("/login");
   }
 
-  // Check whether this Rooted account owns Rosh Hashanah.
+  // Check whether this account has access to Rosh Hashanah.
   const { data: access, error: accessError } = await supabase
     .from("course_access")
     .select("id")
@@ -81,14 +27,14 @@ export default async function RoshHashanahPage() {
     .eq("course_slug", "rosh-hashanah")
     .maybeSingle();
 
-  // If Supabase itself returns an error, do not expose the paid content.
+  // Supabase error → do not expose paid content.
   if (accessError) {
     return (
       <main className="awake-page">
         <header className="topbar">
           <div className="brand">
             <span className="leaf">❧</span>
-            <span>ROSH HASHANAH</span>
+            <span>THE THRESHOLD</span>
             <span className="leaf">❧</span>
           </div>
 
@@ -104,7 +50,7 @@ export default async function RoshHashanahPage() {
         <section className="journey-hero">
           <p className="small-label">ROOTED COURSE</p>
 
-          <h1>ROSH HASHANAH</h1>
+          <h1>THE THRESHOLD</h1>
 
           <div className="ornament">
             <span>✦</span>
@@ -145,8 +91,8 @@ export default async function RoshHashanahPage() {
               margin: "0 auto 2.5rem",
             }}
           >
-            We could not confirm your access to this journey right now. Please
-            try again shortly.
+            We could not confirm your access to this journey right now.
+            Please try again shortly.
           </p>
 
           <Link href="/courses" className="primary-button">
@@ -156,21 +102,21 @@ export default async function RoshHashanahPage() {
         </section>
 
         <footer>
-          <div className="footer-brand">ROSH HASHANAH</div>
-          <div>Awake. Remember. Prepare.</div>
+          <div className="footer-brand">THE THRESHOLD</div>
+          <div>Remember. Release. Return. Listen. Cross.</div>
         </footer>
       </main>
     );
   }
 
-  // Signed in, but this account has not purchased/unlocked Rosh Hashanah.
+  // Signed in, but this account does not own the course.
   if (!access) {
     return (
       <main className="awake-page">
         <header className="topbar">
           <div className="brand">
             <span className="leaf">❧</span>
-            <span>ROSH HASHANAH</span>
+            <span>THE THRESHOLD</span>
             <span className="leaf">❧</span>
           </div>
 
@@ -186,7 +132,7 @@ export default async function RoshHashanahPage() {
         <section className="journey-hero">
           <p className="small-label">A FIVE-DAY JOURNEY</p>
 
-          <h1>ROSH HASHANAH</h1>
+          <h1>THE THRESHOLD</h1>
 
           <div className="ornament">
             <span>✦</span>
@@ -227,8 +173,8 @@ export default async function RoshHashanahPage() {
               margin: "0 auto 2rem",
             }}
           >
-            You are signed in to your Rooted account, but this account does
-            not currently have access to the Rosh Hashanah Journey.
+            You are signed in to your Rooted account, but this account
+            does not currently have access to The Threshold.
           </p>
 
           <p
@@ -238,9 +184,9 @@ export default async function RoshHashanahPage() {
               margin: "0 auto 2.5rem",
             }}
           >
-            If you have already paid for this devotional, please make sure you
-            are signed in with the email address you used when requesting
-            access.
+            If you have already paid for this devotional, please make
+            sure you are signed in with the email address associated
+            with your access.
           </p>
 
           <Link href="/courses" className="primary-button">
@@ -250,20 +196,20 @@ export default async function RoshHashanahPage() {
         </section>
 
         <footer>
-          <div className="footer-brand">ROSH HASHANAH</div>
-          <div>Awake. Remember. Prepare.</div>
+          <div className="footer-brand">THE THRESHOLD</div>
+          <div>Remember. Release. Return. Listen. Cross.</div>
         </footer>
       </main>
     );
   }
 
-  // Access confirmed → paid content can now render.
+  // Access confirmed → render paid course home.
   return (
     <main className="awake-page">
       <header className="topbar">
         <div className="brand">
           <span className="leaf">❧</span>
-          <span>ROSH HASHANAH</span>
+          <span>THE THRESHOLD</span>
           <span className="leaf">❧</span>
         </div>
 
@@ -278,18 +224,22 @@ export default async function RoshHashanahPage() {
 
       {/* HERO */}
       <section className="journey-hero">
-        <p className="small-label">A FIVE-DAY JOURNEY</p>
+        <p className="small-label">
+          A FIVE-DAY ROSH HASHANAH JOURNEY
+        </p>
 
-        <h1>ROSH HASHANAH</h1>
+        <h1>THE THRESHOLD</h1>
 
         <div className="ornament">
           <span>✦</span>
         </div>
 
         <p className="subtitle">
-          When the trumpet sounds,
+          Remembrance.
           <br />
-          may your heart be awake.
+          Release.
+          <br />
+          Becoming.
         </p>
 
         <div className="floral-divider">
@@ -299,11 +249,11 @@ export default async function RoshHashanahPage() {
         </div>
 
         <p className="hero-note">
-          5 DAYS · SCRIPTURE · AUDIO · REFLECTION
+          REMEMBER · RELEASE · RETURN · LISTEN · CROSS
         </p>
       </section>
 
-      {/* INTRODUCTION */}
+      {/* INVITATION */}
       <section
         style={{
           maxWidth: "760px",
@@ -320,11 +270,9 @@ export default async function RoshHashanahPage() {
             margin: "1.5rem 0 2rem",
           }}
         >
-          Awake.
+          Stand at
           <br />
-          Remember.
-          <br />
-          Prepare.
+          the threshold.
         </h2>
 
         <p
@@ -334,11 +282,9 @@ export default async function RoshHashanahPage() {
             lineHeight: "1.9",
           }}
         >
-          This five-day journey is an invitation to slow down and become
-          attentive to God as we approach Rosh Hashanah. Through Scripture,
-          teaching, prayer and reflection, we will consider the biblical
-          significance of the trumpet, remembrance, repentance and
-          preparation.
+          The Threshold is a place between what has ended and what
+          has not yet fully begun. Move through these five days slowly:
+          remember, release, return, listen and cross.
         </p>
       </section>
 
@@ -348,9 +294,10 @@ export default async function RoshHashanahPage() {
           <span className="quote-mark">“</span>
 
           <p>
-            Speak to the children of Israel, saying, In the seventh month, on
-            the first day of the month, you shall have a solemn rest, a
-            memorial of blowing of trumpets, a holy convocation.
+            Speak to the children of Israel, saying, In the seventh
+            month, on the first day of the month, you shall have a
+            solemn rest, a memorial of blowing of trumpets, a holy
+            convocation.
           </p>
 
           <small>LEVITICUS 23:24 · WEB</small>
@@ -360,7 +307,7 @@ export default async function RoshHashanahPage() {
       {/* START HERE */}
       <section
         style={{
-          maxWidth: "760px",
+          maxWidth: "860px",
           margin: "0 auto",
           padding: "5rem 1.5rem",
         }}
@@ -379,7 +326,9 @@ export default async function RoshHashanahPage() {
               margin: "1rem 0",
             }}
           >
-            Before the journey begins.
+            Before you begin
+            <br />
+            the five days.
           </h2>
 
           <p
@@ -389,27 +338,27 @@ export default async function RoshHashanahPage() {
               lineHeight: "1.9",
             }}
           >
-            Begin with the introductory teaching, then keep the full
-            devotional close throughout the five days. The devotional is your
-            written companion for Scripture, reflection and prayer.
+            Begin with the introductory teaching and keep the complete
+            devotional nearby as your written companion throughout
+            the journey.
           </p>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(260px, 1fr))",
             gap: "1.5rem",
           }}
         >
-          {/* INTRODUCTION AUDIO */}
           <article
             style={{
               border: "1px solid rgba(0,0,0,0.15)",
               padding: "2rem",
             }}
           >
-            <p className="section-label">AUDIO TEACHING</p>
+            <p className="section-label">INTRODUCTION AUDIO</p>
 
             <h3
               style={{
@@ -427,8 +376,8 @@ export default async function RoshHashanahPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Begin here with a gentle introduction to Rosh Hashanah and the
-              invitation to become spiritually awake.
+              Begin with the introductory teaching before entering
+              Day One.
             </p>
 
             <a
@@ -442,7 +391,6 @@ export default async function RoshHashanahPage() {
             </a>
           </article>
 
-          {/* FULL DEVOTIONAL */}
           <article
             style={{
               border: "1px solid rgba(0,0,0,0.15)",
@@ -467,8 +415,8 @@ export default async function RoshHashanahPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Open your complete devotional and return to it each day as you
-              move through the journey.
+              Read, study, journal and return to the complete
+              devotional throughout the five-day journey.
             </p>
 
             <a
@@ -484,18 +432,18 @@ export default async function RoshHashanahPage() {
         </div>
       </section>
 
-      {/* JOURNEY */}
+      {/* FIVE DAYS */}
       <section
         style={{
-          maxWidth: "760px",
+          maxWidth: "860px",
           margin: "0 auto",
-          padding: "1rem 1.5rem 5rem",
+          padding: "1rem 1.5rem 6rem",
         }}
       >
         <div
           style={{
             textAlign: "center",
-            marginBottom: "3rem",
+            marginBottom: "3.5rem",
           }}
         >
           <p className="section-label">THE FIVE-DAY JOURNEY</p>
@@ -506,20 +454,20 @@ export default async function RoshHashanahPage() {
               margin: "1rem 0",
             }}
           >
-            Take one day
+            One threshold.
             <br />
-            at a time.
+            Five movements.
           </h2>
 
           <p
             style={{
-              maxWidth: "580px",
+              maxWidth: "600px",
               margin: "0 auto",
               lineHeight: "1.9",
             }}
           >
-            There is no need to rush ahead. Give each day room to do its work.
-            Listen, read, reflect, pray and respond before moving forward.
+            Do not rush ahead. Let each day do its work before
+            moving into the next.
           </p>
         </div>
 
@@ -530,64 +478,85 @@ export default async function RoshHashanahPage() {
             gap: "1.5rem",
           }}
         >
-          {journeyDays.map((item) => (
+          {roshHashanahDays.map((item) => (
             <article
               key={item.day}
               style={{
                 border: "1px solid rgba(0,0,0,0.15)",
                 padding: "2.5rem",
-                opacity: item.available ? 1 : 0.68,
               }}
             >
-              <p
-                className="section-label"
+              <div
                 style={{
-                  marginBottom: "0.8rem",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "space-between",
+                  gap: "1rem",
+                  flexWrap: "wrap",
                 }}
               >
-                {item.day}
-              </p>
-
-              <h3
-                style={{
-                  fontSize: "2rem",
-                  lineHeight: "1.2",
-                  marginBottom: "1rem",
-                }}
-              >
-                {item.title}
-              </h3>
-
-              <p
-                style={{
-                  lineHeight: "1.9",
-                  marginBottom: item.available ? "1.8rem" : 0,
-                }}
-              >
-                {item.description}
-              </p>
-
-              {item.available ? (
-                <a
-                  href={item.audio}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="primary-button"
-                >
-                  Listen to Day {item.dayNumber}
-                  <span>→</span>
-                </a>
-              ) : (
-                <p
+                <div
                   style={{
-                    fontSize: "0.72rem",
-                    letterSpacing: "0.12em",
-                    marginTop: "1.5rem",
+                    flex: "1 1 420px",
                   }}
                 >
-                  AUDIO COMING NEXT
-                </p>
-              )}
+                  <p
+                    className="section-label"
+                    style={{
+                      marginBottom: "0.8rem",
+                    }}
+                  >
+                    DAY {String(item.day).padStart(2, "0")}
+                  </p>
+
+                  <h3
+                    style={{
+                      fontSize: "0.9rem",
+                      letterSpacing: "0.16em",
+                      marginBottom: "0.8rem",
+                    }}
+                  >
+                    {item.theme}
+                  </h3>
+
+                  <h2
+                    style={{
+                      lineHeight: "1.2",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    {item.title}
+                  </h2>
+
+                  <p
+                    style={{
+                      lineHeight: "1.8",
+                      marginBottom: "1.8rem",
+                    }}
+                  >
+                    {item.scripture}
+                  </p>
+
+                  <Link
+                    href={`/courses/rosh-hashanah/day/${item.day}`}
+                    className="primary-button"
+                  >
+                    Enter Day {item.day}
+                    <span>→</span>
+                  </Link>
+                </div>
+
+                <div
+                  style={{
+                    fontSize: "4rem",
+                    lineHeight: "1",
+                    opacity: 0.12,
+                    fontWeight: 600,
+                  }}
+                >
+                  {String(item.day).padStart(2, "0")}
+                </div>
+              </div>
             </article>
           ))}
         </div>
@@ -597,20 +566,23 @@ export default async function RoshHashanahPage() {
       <section className="journey-stages">
         <p className="section-label">THE RHYTHM</p>
 
-        <h2>Listen for the trumpet.</h2>
+        <h2>Move with intention.</h2>
 
         <div className="journey-days">
           <article>
             <span>01</span>
-            <h3>Awaken</h3>
-            <p>Become attentive again to the voice and movement of God.</p>
+            <h3>Remember</h3>
+            <p>
+              Gather the evidence of God&apos;s faithfulness without
+              returning to live in the past.
+            </p>
           </article>
 
           <article>
             <span>02</span>
-            <h3>Remember</h3>
+            <h3>Release</h3>
             <p>
-              Remember what God has spoken and how faithfully He has carried
+              Put down what does not have permission to cross with
               you.
             </p>
           </article>
@@ -619,24 +591,25 @@ export default async function RoshHashanahPage() {
             <span>03</span>
             <h3>Return</h3>
             <p>
-              Allow remembrance to lead you into repentance and renewed
-              obedience.
+              Let the call forward first bring your whole heart back
+              to God.
             </p>
           </article>
 
           <article>
             <span>04</span>
-            <h3>Prepare</h3>
+            <h3>Listen</h3>
             <p>
-              Make room in your heart for what God is calling you into next.
+              Quiet the noise and listen for the next faithful thing.
             </p>
           </article>
 
           <article>
             <span>05</span>
-            <h3>Cross the Threshold</h3>
+            <h3>Cross</h3>
             <p>
-              Enter the next season awake, surrendered and attentive to God.
+              When God has made the next step clear, move with
+              courage.
             </p>
           </article>
         </div>
@@ -647,26 +620,26 @@ export default async function RoshHashanahPage() {
         <p className="section-label">BEGIN THE JOURNEY</p>
 
         <h2>
-          Hear the sound.
+          Remember.
           <br />
-          Become attentive.
+          Release.
+          <br />
+          Return.
         </h2>
 
         <p>
-          You do not need to understand everything before you begin. Start
-          with the introduction, open your devotional and allow God to meet
-          you one day at a time.
+          You do not need to have the next season fully understood
+          before you enter this journey. Begin with what God has
+          already placed in front of you.
         </p>
 
-        <a
-          href={introductionAudio}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/courses/rosh-hashanah/day/1"
           className="primary-button"
         >
-          Begin with the Introduction
+          Enter Day One
           <span>→</span>
-        </a>
+        </Link>
 
         <div style={{ marginTop: "2rem" }}>
           <Link href="/courses" className="text-link">
@@ -676,8 +649,8 @@ export default async function RoshHashanahPage() {
       </section>
 
       <footer>
-        <div className="footer-brand">ROSH HASHANAH</div>
-        <div>Awake. Remember. Prepare.</div>
+        <div className="footer-brand">THE THRESHOLD</div>
+        <div>Remember. Release. Return. Listen. Cross.</div>
       </footer>
     </main>
   );
