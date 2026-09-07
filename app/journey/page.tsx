@@ -27,6 +27,14 @@ const weeklyTeachings = [
     audio:
       "https://drive.google.com/file/d/1qlLZ7iRkm-xCD5ed4Q1zpZ7cd7ra7vOr/view?usp=drive_link",
   },
+  {
+    week: "WEEK FOUR",
+    title: "Build and Cross Over",
+    description:
+      "This week, revelation becomes ordered obedience. Write the vision faithfully, count the cost, gather what is already in your hands, order the work, build with others, guard your portion and finish what God has entrusted to you.",
+    audio:
+      "https://drive.google.com/file/d/1BbKBRblhRqFYk4vN9ExyS4pHxynwLcjy/view?usp=drivesdk",
+  },
 ];
 
 export default function JourneyPage() {
@@ -162,7 +170,7 @@ export default function JourneyPage() {
             }}
           >
             Move through the journey at your own pace. Select any day below
-            to enter directly into that day's reflection.
+            to enter directly into that day&apos;s reflection.
           </p>
         </div>
 
@@ -349,7 +357,7 @@ export default function JourneyPage() {
         <p className="section-label">BEGIN HERE</p>
 
         <h2>
-          You don't have
+          You don&apos;t have
           <br />
           to rush.
         </h2>
