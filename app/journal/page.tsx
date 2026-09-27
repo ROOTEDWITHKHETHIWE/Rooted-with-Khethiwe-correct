@@ -2,8 +2,20 @@ import Link from "next/link";
 
 export default function JournalPage() {
   return (
-    <main className="awake-page">
-      <header className="topbar">
+    <main
+      className="awake-page"
+      style={{
+        background: "#f7fbff",
+        color: "#24496d",
+      }}
+    >
+      <header
+        className="topbar"
+        style={{
+          background: "#ffffff",
+          borderBottom: "1px solid #d3e3f0",
+        }}
+      >
         <div className="brand">
           <span className="leaf">❧</span>
           <span>MIDWEEK ROOTED</span>
@@ -19,41 +31,69 @@ export default function JournalPage() {
         </nav>
       </header>
 
-      <section className="journey-hero">
-        <p className="small-label">YOUR JOURNAL</p>
+      <section
+        className="journey-hero"
+        style={{
+          background:
+            "linear-gradient(135deg, #fbfdff 0%, #e4f2fb 60%, #d5e9f7 100%)",
+          color: "#294f76",
+        }}
+      >
+        <p className="small-label">ROOTED JOURNAL</p>
 
         <h1>JOURNAL</h1>
 
         <div className="ornament">
-          <span>✦</span>
+          <span>❧</span>
         </div>
 
         <p className="subtitle">
-          Take what you are learning
+          Scripture, reflection and
           <br />
-          beyond the screen.
+          journeys to return to.
         </p>
       </section>
 
       <section className="journey-introduction">
-        <p className="section-label">AWAKE</p>
+        <p className="section-label">COMPLETED JOURNEY</p>
 
         <h2>
-          Make space
+          Still finishing
           <br />
-          to respond.
+          Awake?
         </h2>
 
         <p>
-          The Awake journey is designed to be read slowly and lived honestly.
-          Use the journal alongside each day to write, reflect and respond to
-          what God is showing you.
+          Awake has moved into the Journal archive so every woman can return
+          to the days she has not yet completed, at her own pace.
         </p>
 
-        <div className="gold-line" />
+        <Link
+          href="/journal/awake"
+          className="primary-button"
+          style={{
+            background: "#24496d",
+            color: "#ffffff",
+            marginTop: "1.5rem",
+          }}
+        >
+          Continue the Awake Journey
+          <span>→</span>
+        </Link>
+
+        <div
+          className="gold-line"
+          style={{ background: "#8baeca" }}
+        />
       </section>
 
-      <section className="scripture">
+      <section
+        className="scripture"
+        style={{
+          background: "#e3f1fa",
+          color: "#24496d",
+        }}
+      >
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
 
@@ -75,9 +115,8 @@ export default function JournalPage() {
         </h2>
 
         <p>
-          Open the Awake journal and continue your journey beyond the website.
-          You can read, download or print the resources from the Rooted
-          collection.
+          Take what God is revealing beyond the screen. Read slowly, write
+          honestly and return to the moments that continue speaking to you.
         </p>
 
         <a
@@ -86,12 +125,17 @@ export default function JournalPage() {
           rel="noopener noreferrer"
           className="primary-button"
         >
-          Open the Awake Journal
+          Open the Journal Resources
           <span>↗</span>
         </a>
       </section>
 
-      <footer>
+      <footer
+        style={{
+          background: "#24496d",
+          color: "#ffffff",
+        }}
+      >
         <div className="footer-brand">MIDWEEK ROOTED</div>
         <div>A monthly Scripture journey</div>
       </footer>
