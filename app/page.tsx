@@ -2,8 +2,20 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="awake-page">
-      <header className="topbar">
+    <main
+      className="awake-page"
+      style={{
+        background: "#f7fbff",
+        color: "#24496d",
+      }}
+    >
+      <header
+        className="topbar"
+        style={{
+          background: "#ffffff",
+          borderBottom: "1px solid #d3e3f0",
+        }}
+      >
         <div className="brand">
           <span className="leaf">❧</span>
           <span>MIDWEEK ROOTED</span>
@@ -19,28 +31,52 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero">
+      <section
+        className="hero"
+        style={{
+          background:
+            "linear-gradient(135deg, #fbfdff 0%, #e4f2fb 55%, #d1e7f7 100%)",
+        }}
+      >
         <div className="hero-wash wash-one" />
         <div className="hero-wash wash-two" />
 
         <div className="hero-content">
           <p className="small-label">A MONTHLY SCRIPTURE JOURNEY</p>
 
-          <h1>AWAKE</h1>
+          <h1
+            style={{
+              color: "#315a82",
+              fontStyle: "italic",
+            }}
+          >
+            BECOMING
+          </h1>
 
           <div className="ornament">
-            <span>✦</span>
+            <span>❧</span>
           </div>
 
           <p className="subtitle">
-            A 30-Day Journey of Returning,
+            A 30-Day Devotional Journey of Identity,
             <br />
-            Remembering and Preparing with God
+            Formation, Entrustment &amp; Occupation
+          </p>
+
+          <p
+            style={{
+              fontStyle: "italic",
+              color: "#6287aa",
+              fontSize: "1.2rem",
+              marginTop: "1rem",
+            }}
+          >
+            Stepping Into Who God Has Called You to Be
           </p>
 
           <div className="floral-divider">
             <span>❀</span>
-            <span>✦</span>
+            <span>❧</span>
             <span>❀</span>
           </div>
 
@@ -60,30 +96,40 @@ export default function Home() {
         <p className="section-label">THE INVITATION</p>
 
         <h2>
-          Become attentive
+          Step into who
           <br />
-          to God again.
+          God has called you to be.
         </h2>
 
         <p>
-          Awake is a thirty-day journey for women who sense God calling them
-          to pay attention again — to return, remember, repent, prepare and
-          walk into the next season with an obedient heart.
+          Becoming is not a challenge to reinvent yourself. It is an invitation
+          to let God separate who He created you to be from the identities
+          formed by pain, survival, performance, expectation and previous
+          seasons.
         </p>
 
-        <div className="gold-line" />
+        <div
+          className="gold-line"
+          style={{ background: "#8baeca" }}
+        />
       </section>
 
-      <section className="scripture">
+      <section
+        className="scripture"
+        style={{
+          background: "#e3f1fa",
+          color: "#24496d",
+        }}
+      >
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
 
           <p>
-            Awake, O sleeper, and arise from the dead, and Christ will shine
-            on you.
+            Do not be conformed to this world, but be transformed by the
+            renewing of your mind.
           </p>
 
-          <small>EPHESIANS 5:14 · WEB</small>
+          <small>ROMANS 12:2 · WEB</small>
         </div>
       </section>
 
@@ -92,9 +138,9 @@ export default function Home() {
           <p className="section-label">YOUR 30 DAYS</p>
 
           <h2>
-            Not simply
+            Same you.
             <br />
-            pages to finish.
+            More of Him.
           </h2>
         </div>
 
@@ -105,8 +151,9 @@ export default function Home() {
           </p>
 
           <p>
-            The goal is not to finish pages. The goal is to become responsive
-            to God.
+            Awake made room for repair. Becoming asks what happens next: Who
+            are you now, and will you live from the identity God is
+            establishing in you?
           </p>
 
           <Link href="/journey" className="text-link">
@@ -115,7 +162,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="welcome">
+      <section
+        className="welcome"
+        style={{
+          background: "#edf7fc",
+        }}
+      >
         <div className="welcome-card">
           <p className="section-label">ROOTED WITH KHETHIWE</p>
 
@@ -133,9 +185,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
+      <footer
+        style={{
+          background: "#24496d",
+          color: "#ffffff",
+        }}
+      >
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
