@@ -1033,3 +1033,121 @@ footer {
     gap: 10px;
   }
 }
+/* BECOMING — OCTOBER BLUE VISUAL SYSTEM */
+
+.awake-page {
+  --becoming-navy: #24496d;
+  --becoming-blue: #547da4;
+  --becoming-sky: #dceef9;
+  --becoming-pale: #f7fbff;
+  --becoming-line: #c9deed;
+
+  background: var(--becoming-pale) !important;
+  color: var(--becoming-navy) !important;
+}
+
+/* Remove the lingering Awake peach / rose washes */
+.awake-page .hero-wash,
+.awake-page .wash-one,
+.awake-page .wash-two {
+  display: none !important;
+}
+
+.awake-page .topbar,
+.awake-page .threshold,
+.awake-page .journey-preview,
+.awake-page .journey-overview,
+.awake-page .journey-introduction,
+.awake-page .day-content,
+.awake-page .reflection-section,
+.awake-page .prayer-section {
+  background: #f9fcff !important;
+  color: var(--becoming-navy) !important;
+}
+
+.awake-page .welcome,
+.awake-page .journey-stages,
+.awake-page .respond-section,
+.awake-page .day-navigation {
+  background: #e7f3fb !important;
+  color: var(--becoming-navy) !important;
+}
+
+.awake-page .scripture,
+.awake-page .day-scripture,
+.awake-page .truth-card {
+  background: #dceef9 !important;
+  color: var(--becoming-navy) !important;
+}
+
+/* Text */
+.awake-page h1,
+.awake-page h2,
+.awake-page h3,
+.awake-page p,
+.awake-page .subtitle,
+.awake-page .hero-note,
+.awake-page .section-label,
+.awake-page .small-label,
+.awake-page .journey-copy,
+.awake-page .text-link {
+  color: var(--becoming-navy) !important;
+}
+
+.awake-page .small-label,
+.awake-page .section-label,
+.awake-page .hero-note {
+  color: #5d86ab !important;
+}
+
+/* Replace gold accents with blue */
+.awake-page .gold-line,
+.awake-page .ornament,
+.awake-page .floral-divider,
+.awake-page .leaf,
+.awake-page .quote-mark,
+.awake-page .botanical {
+  color: #7199bd !important;
+}
+
+.awake-page .gold-line {
+  background: #86aac8 !important;
+}
+
+/* Cards, writing areas and borders */
+.awake-page .welcome-card,
+.awake-page .response-box,
+.awake-page .reflection-space,
+.awake-page .journey-days article,
+.awake-page .day-navigation,
+.awake-page article {
+  background: #ffffff !important;
+  border-color: var(--becoming-line) !important;
+  box-shadow: none !important;
+}
+
+.awake-page .writing-line {
+  border-color: #b8d1e4 !important;
+}
+
+/* Buttons */
+.awake-page .primary-button {
+  background: var(--becoming-navy) !important;
+  border-color: var(--becoming-navy) !important;
+  color: #ffffff !important;
+}
+
+.awake-page .primary-button:hover {
+  background: #3a668e !important;
+  border-color: #3a668e !important;
+}
+
+/* Footer */
+.awake-page footer {
+  background: var(--becoming-navy) !important;
+  color: #ffffff !important;
+}
+
+.awake-page footer * {
+  color: #ffffff !important;
+}
