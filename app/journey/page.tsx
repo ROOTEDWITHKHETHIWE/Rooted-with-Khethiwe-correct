@@ -1,46 +1,54 @@
 import Link from "next/link";
 
-const days = Array.from({ length: 30 }, (_, index) => index + 1);
-
-const weeklyTeachings = [
-  {
-    week: "WEEK ONE",
-    title: "Returning to Attention",
-    description:
-      "Begin the journey by slowing down, becoming attentive, and returning your heart to what God is saying.",
-    audio:
-      "https://drive.google.com/file/d/1xE4Zjdf7uKlHemkVpLXd6ItMniCGSs9S/view?usp=drivesdk",
-  },
-  {
-    week: "WEEK TWO",
-    title: "Continuing the Journey",
-    description:
-      "Continue deeper into the journey with this week's teaching and allow God to speak into what He is revealing.",
-    audio:
-      "https://drive.google.com/file/d/1oCHCeWqu2zV717xg-OSyvIxnDOX5dYc7/view?usp=drivesdk",
-  },
-  {
-    week: "WEEK THREE",
-    title: "Watch and Prepare",
-    description:
-      "This week, we become watchful and intentional. We allow God to prepare our hearts, sharpen our discernment, and teach us how to remain awake as we approach the threshold ahead.",
-    audio:
-      "https://drive.google.com/file/d/1qlLZ7iRkm-xCD5ed4Q1zpZ7cd7ra7vOr/view?usp=drive_link",
-  },
-  {
-    week: "WEEK FOUR",
-    title: "Build and Cross Over",
-    description:
-      "This week, revelation becomes ordered obedience. Write the vision faithfully, count the cost, gather what is already in your hands, order the work, build with others, guard your portion and finish what God has entrusted to you.",
-    audio:
-      "https://drive.google.com/file/d/1BbKBRblhRqFYk4vN9ExyS4pHxynwLcjy/view?usp=drivesdk",
-  },
+const journeyDays = [
+  "You Cannot Take Her With You",
+  "When Survival Became a Name",
+  "The Roles That Named You",
+  "The Identity of Disappointment",
+  "Stop Introducing Yourself by the Ruins",
+  "Comparison Cannot Name You",
+  "Leave the Old Garments Behind",
+  "Known Before You Performed",
+  "Named by God",
+  "You Belong Before You Build",
+  "Chosen Is Not the Same as Visible",
+  "Your Identity Is Not Your Assignment",
+  "Secure in the Father’s Love",
+  "Remember Who You Are",
+  "The Secret Place Was Preparation",
+  "Hidden Does Not Mean Forgotten",
+  "What the Wilderness Produced",
+  "The Oil Came Before the Room",
+  "You Are Not Still Waiting to Become Ready",
+  "Formation Has Produced Capacity",
+  "There Is a Difference Between Hidden and Hiding",
+  "Faithful With Little",
+  "When God Entrusts More",
+  "A Prisoner Cannot Govern Egypt",
+  "Take Your Place",
+  "Authority Without Performance",
+  "Enlarge the Tent",
+  "Carry It Without Losing the Secret Place",
+  "Occupy Without Apology",
+  "Become",
 ];
 
 export default function JourneyPage() {
   return (
-    <main className="awake-page">
-      <header className="topbar">
+    <main
+      className="awake-page"
+      style={{
+        background: "#f7fbff",
+        color: "#24496d",
+      }}
+    >
+      <header
+        className="topbar"
+        style={{
+          background: "#ffffff",
+          borderBottom: "1px solid #d3e3f0",
+        }}
+      >
         <div className="brand">
           <span className="leaf">❧</span>
           <span>MIDWEEK ROOTED</span>
@@ -56,24 +64,49 @@ export default function JourneyPage() {
         </nav>
       </header>
 
-      <section className="journey-hero">
+      <section
+        className="journey-hero"
+        style={{
+          background:
+            "linear-gradient(135deg, #fafdff 0%, #e3f1fb 55%, #d5e9f7 100%)",
+          color: "#294f76",
+        }}
+      >
         <p className="small-label">THE CURRENT JOURNEY</p>
 
-        <h1>AWAKE</h1>
+        <h1
+          style={{
+            fontStyle: "italic",
+            color: "#315a82",
+          }}
+        >
+          BECOMING
+        </h1>
 
         <div className="ornament">
-          <span>✦</span>
+          <span>❧</span>
         </div>
 
         <p className="subtitle">
-          A 30-Day Journey of Returning,
+          A 30-Day Devotional Journey of Identity,
           <br />
-          Remembering and Preparing with God
+          Formation, Entrustment &amp; Occupation
+        </p>
+
+        <p
+          style={{
+            fontStyle: "italic",
+            fontSize: "1.25rem",
+            marginTop: "1.5rem",
+            color: "#6287aa",
+          }}
+        >
+          Stepping Into Who God Has Called You to Be
         </p>
 
         <div className="floral-divider">
           <span>❀</span>
-          <span>✦</span>
+          <span>❧</span>
           <span>❀</span>
         </div>
 
@@ -84,30 +117,40 @@ export default function JourneyPage() {
         <p className="section-label">THE INVITATION</p>
 
         <h2>
-          Become attentive
+          Step into who
           <br />
-          to God again.
+          God has called you to be.
         </h2>
 
         <p>
-          Awake is a thirty-day journey for women who sense God calling them
-          to pay attention again — to return, remember, repent, prepare and
-          walk into the next season with an obedient heart.
+          Becoming is not a challenge to reinvent yourself. It is an invitation
+          to let God separate who He created you to be from the identities
+          formed by pain, survival, performance, expectation and previous
+          seasons.
         </p>
 
-        <div className="gold-line" />
+        <div
+          className="gold-line"
+          style={{ background: "#8baeca" }}
+        />
       </section>
 
-      <section className="scripture">
+      <section
+        className="scripture"
+        style={{
+          background: "#dfeef8",
+          color: "#24496d",
+        }}
+      >
         <div className="scripture-inner">
           <span className="quote-mark">“</span>
 
           <p>
-            Awake, O sleeper, and arise from the dead, and Christ will shine
-            on you.
+            Do not be conformed to this world, but be transformed by the
+            renewing of your mind.
           </p>
 
-          <small>EPHESIANS 5:14 · WEB</small>
+          <small>ROMANS 12:2 · WEB</small>
         </div>
       </section>
 
@@ -116,238 +159,153 @@ export default function JourneyPage() {
           <p className="section-label">YOUR 30 DAYS</p>
 
           <h2>
-            One day.
+            Not becoming
             <br />
-            One Scripture.
+            someone else.
             <br />
-            One response.
+            Becoming rooted.
           </h2>
         </div>
 
         <div className="journey-copy">
           <p>
-            Each day invites you to read the Scripture, receive the teaching,
-            reflect honestly, pray and respond.
+            Read the Scripture. Receive the teaching. Reflect honestly. Pray.
+            Respond.
           </p>
 
           <p>
-            This is not a challenge to complete as quickly as possible. It is
-            an invitation to become increasingly responsive to God.
+            Awake made room for repair. Becoming asks what happens next: Who
+            are you now, and will you live from the identity God is
+            establishing in you?
           </p>
         </div>
       </section>
 
-      {/* 30-DAY JOURNEY NAVIGATION */}
       <section
         style={{
-          maxWidth: "900px",
+          maxWidth: "1000px",
           margin: "0 auto",
           padding: "1rem 1.5rem 5rem",
         }}
       >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "2.5rem",
-          }}
-        >
-          <p className="section-label">THE AWAKE JOURNEY</p>
+        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+          <p className="section-label">THE BECOMING JOURNEY</p>
 
-          <h2
-            style={{
-              lineHeight: "1.2",
-              marginBottom: "1rem",
-            }}
-          >
+          <h2 style={{ lineHeight: "1.2", marginBottom: "1rem" }}>
             Choose your day.
           </h2>
 
           <p
             style={{
-              maxWidth: "560px",
+              maxWidth: "600px",
               margin: "0 auto",
               lineHeight: "1.8",
             }}
           >
-            Move through the journey at your own pace. Select any day below
-            to enter directly into that day&apos;s reflection.
+            Move slowly through this journey. Some days will ask you to
+            release. Others will ask you to remember. Each one is an invitation
+            to become more rooted in who God created you to be.
           </p>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
             gap: "1rem",
           }}
         >
-          {days.map((day) => (
-            <Link
-              key={day}
-              href={`/journey/day/${day}`}
-              style={{
-                display: "block",
-                border: "1px solid rgba(0,0,0,0.15)",
-                padding: "1.5rem 1rem",
-                textAlign: "center",
-                textDecoration: "none",
-                transition: "transform 0.2s ease",
-              }}
-            >
-              <span
-                style={{
-                  display: "block",
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.14em",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                DAY
-              </span>
+          {journeyDays.map((title, index) => {
+            const day = index + 1;
 
-              <strong
+            return (
+              <Link
+                key={day}
+                href={`/journey/day/${day}`}
                 style={{
                   display: "block",
-                  fontSize: "1.5rem",
-                  lineHeight: "1",
+                  background: "#ffffff",
+                  border: "1px solid #c9deed",
+                  padding: "1.35rem",
+                  textDecoration: "none",
+                  color: "#24496d",
+                  minHeight: "150px",
                 }}
               >
-                {String(day).padStart(2, "0")}
-              </strong>
-            </Link>
-          ))}
+                <span
+                  style={{
+                    display: "block",
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.14em",
+                    marginBottom: "0.75rem",
+                    color: "#7194b4",
+                  }}
+                >
+                  DAY {String(day).padStart(2, "0")}
+                </span>
+
+                <strong
+                  style={{
+                    display: "block",
+                    fontSize: "1.25rem",
+                    lineHeight: "1.1",
+                    fontFamily: "Georgia, serif",
+                  }}
+                >
+                  {title}
+                </strong>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
-      {/* WEEKLY TEACHINGS */}
       <section
+        className="journey-stages"
         style={{
-          maxWidth: "900px",
-          margin: "0 auto",
-          padding: "1rem 1.5rem 5rem",
+          background: "#e7f3fb",
         }}
       >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "2.5rem",
-          }}
-        >
-          <p className="section-label">WEEKLY TEACHING</p>
-
-          <h2
-            style={{
-              lineHeight: "1.2",
-              marginBottom: "1rem",
-            }}
-          >
-            Go deeper into the journey.
-          </h2>
-
-          <p
-            style={{
-              maxWidth: "560px",
-              margin: "0 auto",
-              lineHeight: "1.8",
-            }}
-          >
-            Each week, listen to the teaching that accompanies your journey.
-            Take your time, listen prayerfully, and return whenever you need
-            to.
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1.5rem",
-          }}
-        >
-          {weeklyTeachings.map((teaching) => (
-            <article
-              key={teaching.week}
-              style={{
-                border: "1px solid rgba(0,0,0,0.15)",
-                padding: "2rem",
-              }}
-            >
-              <p
-                className="section-label"
-                style={{
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {teaching.week}
-              </p>
-
-              <h3
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                {teaching.title}
-              </h3>
-
-              <p
-                style={{
-                  lineHeight: "1.8",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                {teaching.description}
-              </p>
-
-              <a
-                href={teaching.audio}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="primary-button"
-              >
-                Listen to the teaching
-                <span>→</span>
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="journey-stages">
         <p className="section-label">THE RHYTHM</p>
 
-        <h2>Move slowly. Pay attention.</h2>
+        <h2>
+          Know. Unlearn.
+          <br />
+          Renew. Live.
+        </h2>
 
         <div className="journey-days">
           <article>
             <span>01</span>
-            <h3>Listen</h3>
-            <p>Before we move, we learn to listen for the voice of God.</p>
+            <h3>Know</h3>
+            <p>
+              Receive the truth of who God says you are before you try to build.
+            </p>
           </article>
 
           <article>
             <span>02</span>
-            <h3>Return</h3>
+            <h3>Unlearn</h3>
             <p>
-              We return to Scripture and allow God to bring us back to what
-              matters.
+              Release old names, survival agreements and identities that no
+              longer belong to you.
             </p>
           </article>
 
           <article>
             <span>03</span>
-            <h3>Prepare</h3>
+            <h3>Renew</h3>
             <p>
-              We make room for obedience and prepare our hearts for what God
-              is doing.
+              Allow Scripture and the secret place to renew the way you see
+              yourself.
             </p>
           </article>
 
           <article>
             <span>04</span>
-            <h3>Respond</h3>
+            <h3>Live</h3>
             <p>
-              We respond to what God reveals, allowing revelation to become
-              obedience.
+              Take your place with humility, authority and faithfulness.
             </p>
           </article>
         </div>
@@ -357,14 +315,14 @@ export default function JourneyPage() {
         <p className="section-label">BEGIN HERE</p>
 
         <h2>
-          You don&apos;t have
+          Same you.
           <br />
-          to rush.
+          More of Him.
         </h2>
 
         <p>
-          Start with today. Open your Bible. Become attentive. Let God show
-          you what needs to be seen.
+          Start with today. Open your Bible. Tell God the truth. Let Him show
+          you who you are becoming.
         </p>
 
         <Link href="/journey/day/1" className="primary-button">
@@ -373,9 +331,13 @@ export default function JourneyPage() {
         </Link>
       </section>
 
-      <footer>
+      <footer
+        style={{
+          background: "#24496d",
+          color: "#ffffff",
+        }}
+      >
         <div className="footer-brand">MIDWEEK ROOTED</div>
-
         <div>A monthly Scripture journey</div>
       </footer>
     </main>
