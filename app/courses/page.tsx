@@ -2,6 +2,13 @@ import Link from "next/link";
 
 const availableCourses = [
   {
+    title: "Good Builders Are Good Stewards",
+    description:
+      "A five-day journey of faithfully stewarding what God has placed in your hands, anchored in the parable of the talents.",
+    meta: "5-DAY COURSE",
+    href: "/courses/good-builders-are-good-stewards",
+  },
+  {
     title: "Build According to Pattern",
     description:
       "Learning to build according to what God has revealed and to remain faithful to His pattern.",
