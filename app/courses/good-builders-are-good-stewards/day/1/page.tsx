@@ -1,4 +1,7 @@
 import LessonPage from "../LessonPage";
 import { goodBuildersDays } from "@/data/goodBuilders";
+import { requireGoodBuildersAccess } from "@/app/lib/courseAccess";
 
-export default function DayOnePage() { return <LessonPage day={goodBuildersDays[0]} />; }
+export const dynamic = "force-dynamic";
+
+export default async function DayOnePage() { await requireGoodBuildersAccess("/courses/good-builders-are-good-stewards/day/1"); return <LessonPage day={goodBuildersDays[0]} />; }
