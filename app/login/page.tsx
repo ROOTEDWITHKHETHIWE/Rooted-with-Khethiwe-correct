@@ -29,7 +29,11 @@ export default function LoginPage() {
       return;
     }
 
-    window.location.href = "/courses/before-the-assignment";
+    const requestedPath = new URLSearchParams(window.location.search).get("next");
+    const destination = requestedPath && requestedPath.startsWith("/") && !requestedPath.startsWith("//")
+      ? requestedPath
+      : "/courses";
+    window.location.href = destination;
   }
 
   return (
