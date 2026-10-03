@@ -1,7 +1,26 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { goodBuildersDays } from "@/data/goodBuilders";
+import { checkGoodBuildersAccess } from "@/app/lib/courseAccess";
+import CourseAccessMessage from "./CourseAccessMessage";
 
-export default function GoodBuildersCoursePage() {
+export const dynamic = "force-dynamic";
+
+export default async function GoodBuildersCoursePage() {
+  const { user, access, error } = await checkGoodBuildersAccess();
+
+  if (!user) {
+    redirect("/login?next=%2Fcourses%2Fgood-builders-are-good-stewards");
+  }
+
+  if (error) {
+    return <CourseAccessMessage unavailable />;
+  }
+
+  if (!access) {
+    return <CourseAccessMessage />;
+  }
+
   return (
     <main className="awake-page">
       <header className="topbar">
