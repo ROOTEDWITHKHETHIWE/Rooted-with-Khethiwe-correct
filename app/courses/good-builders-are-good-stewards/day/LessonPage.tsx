@@ -26,6 +26,18 @@ export default function LessonPage({ day }: { day: GoodBuildersDay }) {
           <p style={{ fontSize: "0.8rem", letterSpacing: "0.12em" }}>{day.scripture}</p>
         </div>
 
+        {day.audioSrc && (
+          <section style={{ marginBottom: "5rem", padding: "2.5rem", borderTop: "1px solid rgba(0,0,0,0.15)", borderBottom: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="section-label">AUDIO TEACHING</p>
+            <h2 style={{ marginBottom: "1rem", lineHeight: "1.2" }}>Listen to today&apos;s teaching.</h2>
+            <p style={{ lineHeight: "1.8", marginBottom: "1.5rem" }}>Press play, settle in, and let this teaching walk with you through today&apos;s devotional.</p>
+            <audio controls preload="metadata" style={{ width: "100%" }}>
+              <source src={day.audioSrc} type="audio/mp4" />
+              Your browser does not support the audio element.
+            </audio>
+          </section>
+        )}
+
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">TEACHING</p>
           <h2 style={{ marginBottom: "2.5rem", lineHeight: "1.2" }}>{day.teachingTitle}</h2>
