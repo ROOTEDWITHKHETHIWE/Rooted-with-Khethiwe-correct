@@ -183,6 +183,22 @@ export default function JourneyPage() {
 
       <section
         style={{
+          maxWidth: "760px",
+          margin: "0 auto",
+          padding: "0 1.5rem 4rem",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ padding: "2.5rem", borderTop: "1px solid #c9deed", borderBottom: "1px solid #c9deed" }}>
+          <p className="section-label">YOUR DIGITAL DEVOTIONAL</p>
+          <h2 style={{ color: "#315a82", margin: "1.2rem 0" }}>Take Becoming with you.</h2>
+          <p style={{ maxWidth: "570px", margin: "0 auto 1.5rem", lineHeight: "1.9" }}>Download the complete 30-day Becoming devotional to read, reflect and return to throughout this journey.</p>
+          <a href="/resources/becoming/becoming-digital-edition.pdf" download className="primary-button">Download the full devotional<span>↓</span></a>
+        </div>
+      </section>
+
+      <section
+        style={{
           maxWidth: "1000px",
           margin: "0 auto",
           padding: "1rem 1.5rem 5rem",
