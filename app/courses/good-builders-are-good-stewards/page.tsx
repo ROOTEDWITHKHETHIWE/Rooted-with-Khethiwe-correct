@@ -77,7 +77,9 @@ export default async function GoodBuildersCoursePage() {
 
         <section style={{ textAlign: "center", marginBottom: "4rem" }}>
           <p className="section-label">COURSE RESOURCES</p>
-          <p style={{ maxWidth: "600px", margin: "1rem auto 0", lineHeight: "1.9" }}>Use your devotional workbook alongside each lesson. Daily teaching slides will be added to the course resources soon.</p>
+          <h2 style={{ margin: "1.2rem 0" }}>Your builder&apos;s workbook.</h2>
+          <p style={{ maxWidth: "600px", margin: "0 auto 1.5rem", lineHeight: "1.9" }}>Keep this workbook beside you as you move through the five days: Scripture, teaching, reflection, prayer and room to respond before God.</p>
+          <a href="/resources/good-builders/good-builders-workbook.pdf" download className="primary-button">Download the full workbook<span>↓</span></a>
         </section>
 
         <section style={{ marginBottom: "2rem", padding: "2.5rem", borderTop: "1px solid rgba(0,0,0,0.15)", borderBottom: "1px solid rgba(0,0,0,0.15)" }}>
