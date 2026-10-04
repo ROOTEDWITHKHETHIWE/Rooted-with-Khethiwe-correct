@@ -10,7 +10,6 @@ export type GoodBuildersDay = {
   reflection: string[];
   prayer: string;
   declaration: string;
-  audioSrc?: string;
 };
 
 export const goodBuildersDays: GoodBuildersDay[] = [
@@ -34,7 +33,6 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Lord, open my eyes to what You have already entrusted to me. Deliver me from comparison and from the lie that small beginnings are insignificant. Teach me to obey You with what is in my hands today. Amen.",
     declaration: "I will not despise what is in my hands. I will steward it faithfully, and God will breathe on my obedience.",
-    audioSrc: "/audio/good-builders-day-1.m4a",
   },
   {
     number: 2,
@@ -56,7 +54,6 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Father, free me from comparison and fear. I receive the measure You have entrusted to me with humility and courage. Teach me to work with others and to honour the part You have given each person. Amen.",
     declaration: "God is my Master, not fear. I will steward my measure with faith, humility and obedience.",
-    audioSrc: "/audio/good-builders-day-2.m4a",
   },
   {
     number: 3,
