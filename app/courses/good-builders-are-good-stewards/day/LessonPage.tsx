@@ -38,6 +38,15 @@ export default function LessonPage({ day }: { day: GoodBuildersDay }) {
           </section>
         )}
 
+        {day.slidesPdf && (
+          <section style={{ marginBottom: "5rem", padding: "2.5rem", borderTop: "1px solid rgba(0,0,0,0.15)", borderBottom: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="section-label">TEACHING SLIDES</p>
+            <h2 style={{ marginBottom: "1rem", lineHeight: "1.2" }}>Take today&apos;s teaching with you.</h2>
+            <p style={{ lineHeight: "1.8", marginBottom: "1.5rem" }}>Download the slides to revisit the Scripture, teaching points, declaration and prayer in your own time.</p>
+            <a href={day.slidesPdf} download className="primary-button">Download Day {day.number} slides<span>↓</span></a>
+          </section>
+        )}
+
         <section style={{ marginBottom: "5rem" }}>
           <p className="section-label">TEACHING</p>
           <h2 style={{ marginBottom: "2.5rem", lineHeight: "1.2" }}>{day.teachingTitle}</h2>
