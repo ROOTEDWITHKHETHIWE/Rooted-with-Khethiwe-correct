@@ -11,6 +11,7 @@ export type GoodBuildersDay = {
   prayer: string;
   declaration: string;
   audioSrc?: string;
+  slidesPdf?: string;
 };
 
 export const goodBuildersDays: GoodBuildersDay[] = [
@@ -35,6 +36,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     prayer: "Lord, open my eyes to what You have already entrusted to me. Deliver me from comparison and from the lie that small beginnings are insignificant. Teach me to obey You with what is in my hands today. Amen.",
     declaration: "I will not despise what is in my hands. I will steward it faithfully, and God will breathe on my obedience.",
     audioSrc: "/good-builders-day-1.m4a",
+    slidesPdf: "/resources/good-builders/day-1-slides.pdf",
   },
   {
     number: 2,
@@ -57,6 +59,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     prayer: "Father, free me from comparison and fear. I receive the measure You have entrusted to me with humility and courage. Teach me to work with others and to honour the part You have given each person. Amen.",
     declaration: "God is my Master, not fear. I will steward my measure with faith, humility and obedience.",
     audioSrc: "/good-builders-day-2.m4a",
+    slidesPdf: "/resources/good-builders/day-2-slides.pdf",
   },
   {
     number: 3,
@@ -78,6 +81,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Lord, make me faithful in little. Tear down every agreement I have made with fear. Give me a heart that obeys You now and trusts You with the understanding later. Amen.",
     declaration: "I obey the Master now. Fear is not my master, and faithful stewardship is building capacity in me.",
+    slidesPdf: "/resources/good-builders/day-3-slides.pdf",
   },
   {
     number: 4,
@@ -99,6 +103,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "God, forgive me for every place I have hidden behind delay, fear or false humility. I bring what You gave me back into the light. Give me grace to obey promptly and completely. Amen.",
     declaration: "I will not bury what God has entrusted to me. I choose prompt, humble and complete obedience.",
+    slidesPdf: "/resources/good-builders/day-4-slides.pdf",
   },
   {
     number: 5,
@@ -120,5 +125,6 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Lord, keep my heart near You in every season of growth. Give me godly principles that outlast momentum and success. May I be found faithful from the first yes to the final amen. Amen.",
     declaration: "I will finish well. Growth will not replace God, and enlargement will not remove my dependence on Him.",
+    slidesPdf: "/resources/good-builders/day-5-slides.pdf",
   },
 ];
