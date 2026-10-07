@@ -81,6 +81,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Lord, make me faithful in little. Tear down every agreement I have made with fear. Give me a heart that obeys You now and trusts You with the understanding later. Amen.",
     declaration: "I obey the Master now. Fear is not my master, and faithful stewardship is building capacity in me.",
+    audioSrc: "/good-builders-day-3.m4a",
     slidesPdf: "/resources/good-builders/day-3-slides.pdf",
   },
   {
@@ -103,6 +104,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "God, forgive me for every place I have hidden behind delay, fear or false humility. I bring what You gave me back into the light. Give me grace to obey promptly and completely. Amen.",
     declaration: "I will not bury what God has entrusted to me. I choose prompt, humble and complete obedience.",
+    audioSrc: "/good-builders-day-4.m4a",
     slidesPdf: "/resources/good-builders/day-4-slides.pdf",
   },
   {
@@ -125,6 +127,7 @@ export const goodBuildersDays: GoodBuildersDay[] = [
     ],
     prayer: "Lord, keep my heart near You in every season of growth. Give me godly principles that outlast momentum and success. May I be found faithful from the first yes to the final amen. Amen.",
     declaration: "I will finish well. Growth will not replace God, and enlargement will not remove my dependence on Him.",
+    audioSrc: "/good-builders-day-5.m4a",
     slidesPdf: "/resources/good-builders/day-5-slides.pdf",
   },
 ];
