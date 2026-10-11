@@ -14,6 +14,8 @@ export default function Home() {
         style={{
           background: "#ffffff",
           borderBottom: "1px solid #d3e3f0",
+          flexWrap: "wrap",
+          gap: "12px",
         }}
       >
         <div className="brand">
@@ -22,12 +24,13 @@ export default function Home() {
           <span className="leaf">❧</span>
         </div>
 
-        <nav>
+        <nav style={{ flexWrap: "wrap", padding: "14px 0" }}>
           <Link href="/">Home</Link>
           <Link href="/journey">Journey</Link>
           <Link href="/courses">Courses</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/library">Library</Link>
+          <Link href="/reflection">Gifts &amp; skills</Link>
         </nav>
       </header>
 
@@ -238,6 +241,11 @@ export default function Home() {
             Enter the journey <span>→</span>
           </Link>
         </div>
+      </section>
+
+      <section className="journey-preview" style={{ background: "#edf7fc", color: "#24496d" }}>
+        <div><p className="section-label">GIFTS, SKILLS &amp; STEWARDSHIP</p><h2>What Is in<br />Your Hands?</h2></div>
+        <div className="journey-copy"><p>Recognise the ways you help, the skills you have practised, and the interests you could nurture. Take a short reflection and download your personalised next steps.</p><Link href="/reflection" className="text-link">Explore my gifts &amp; skills <span>→</span></Link><p style={{ fontSize: "0.8rem" }}>Free · 12 questions · No sign-in needed</p></div>
       </section>
 
       <section
