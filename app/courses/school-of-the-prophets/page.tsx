@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { lessons } from "./lessons";
 import styles from "./course.module.css";
 
 export const metadata: Metadata = {
@@ -7,34 +8,6 @@ export const metadata: Metadata = {
   description: "Five self-paced lessons in prophetic foundations.",
   robots: { index: false, follow: false },
 };
-
-const lessons = [
-  {
-    "title": "What Is the Prophetic?",
-    "summary": "Begin with Samuel’s posture as a servant and practise weighing an impression in community.",
-    "file": "01_what_is_the_prophetic.pdf"
-  },
-  {
-    "title": "Build the Altar",
-    "summary": "Establish a prayer rhythm with Scripture, reflection, listening and a seven-day practice.",
-    "file": "02_build_the_altar.pdf"
-  },
-  {
-    "title": "Daniel the Interpreter",
-    "summary": "Learn from Daniel’s dependence on God, then explore biblical associations for colours, numbers and dream symbols.",
-    "file": "03_daniel_the_interpreter.pdf"
-  },
-  {
-    "title": "Steward What You Receive",
-    "summary": "Discern when to hold, weigh, share or act on what you believe you have received.",
-    "file": "04_steward_what_you_receive.pdf"
-  },
-  {
-    "title": "From Revelation to Construction",
-    "summary": "Turn a possible assignment into a practical next step and make time to review it.",
-    "file": "05_from_revelation_to_construction.pdf"
-  }
-];
 
 export default function SchoolOfTheProphets() {
   return (
@@ -54,14 +27,14 @@ export default function SchoolOfTheProphets() {
         </header>
         <section aria-labelledby="lesson-heading" className={styles.section}>
           <h2 id="lesson-heading">Five self-paced lessons</h2>
-          <p>Work through one lesson a week, or take more time for the Scripture reading, practice and reflection. Each PDF includes teaching notes, the full assigned Scripture readings, an exercise and a closing prayer.</p>
+          <p>Work through one lesson a week, or take more time for the Scripture reading, practice and reflection. Open a lesson for a short teaching, a guided activity and reflection. The downloadable study notes inside each lesson give you the full Scripture readings and further practice.</p>
           <ol className={styles.lessons}>
             {lessons.map((lesson, index) => (
               <li key={lesson.file}>
                 <p className={styles.label}>Lesson {String(index + 1).padStart(2, "0")}</p>
                 <h3>{lesson.title}</h3>
                 <p>{lesson.summary}</p>
-                <a href={`/school-of-the-prophets/${lesson.file}`} download aria-label={`Download ${lesson.title} PDF`}>Download lesson PDF ↓</a>
+                <Link href={`/courses/school-of-the-prophets/lesson-${index + 1}`} aria-label={`Enter Lesson ${index + 1}, ${lesson.title}`}>Enter lesson →</Link>
               </li>
             ))}
           </ol>

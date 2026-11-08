@@ -1,352 +1,66 @@
 import Link from "next/link";
-
-const availableCourses = [
-  {
-    title: "School of the Prophets",
-    description:
-      "Five self-paced lessons on hearing as a servant, discerning what you perceive and stewarding what you receive.",
-    meta: "5-LESSON FOUNDATIONS COURSE",
-    href: "/courses/school-of-the-prophets",
-  },
-  {
-    title: "Good Builders Are Good Stewards",
-    description:
-      "A five-day journey of faithfully stewarding what God has placed in your hands, anchored in the parable of the talents.",
-    meta: "5-DAY COURSE",
-    href: "/courses/good-builders-are-good-stewards",
-  },
-  {
-    title: "Build According to Pattern",
-    description:
-      "Learning to build according to what God has revealed and to remain faithful to His pattern.",
-    meta: "5-DAY COURSE",
-    href: "/courses/build-according-to-pattern",
-  },
-  {
-    title: "Before the Assignment",
-    description:
-      "Preparing yourself to encounter God, receive His instruction, walk in consecration and faithfully carry what He has entrusted to you.",
-    meta: "5-DAY COURSE",
-    href: "/courses/before-the-assignment",
-  },
-  {
-    title: "Rosh Hashanah Journey",
-    description:
-      "A five-day devotional journey of awakening, remembrance, repentance, preparation and crossing into the new year attentive to God.",
-    meta: "5-DAY JOURNEY",
-    href: "/courses/rosh-hashanah",
-  },
-];
-
-const upcomingCourses = [
-  {
-    title: "From Revelation to Construction",
-    description:
-      "Moving from what God has revealed to what you are called to build.",
-  },
-];
+import "./courses-index.css";
 
 export default function CoursesPage() {
   return (
-    <main className="awake-page">
-      <header className="topbar">
-        <div className="brand">
-          <span className="leaf">❧</span>
-          <span>MIDWEEK ROOTED</span>
-          <span className="leaf">❧</span>
-        </div>
-
-        <nav>
-          <Link href="/">Home</Link>
+    <main className="est-site">
+      <header className="est-header">
+        <Link className="est-brand" href="/">ROOTED <span>with Khethiwe</span></Link>
+        <nav aria-label="Main navigation">
           <Link href="/journey">Journey</Link>
           <Link href="/courses">Courses</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/library">Library</Link>
+          <Link href="/reflection">Gifts &amp; skills</Link>
+          <Link className="est-account" href="/login">My account</Link>
         </nav>
       </header>
-
-      {/* HERO */}
-      <section className="journey-hero">
-        <p className="small-label">ROOTED LEARNING</p>
-
-        <h1>COURSES</h1>
-
-        <div className="ornament">
-          <span>✦</span>
-        </div>
-
-        <p className="subtitle">
-          Learn deeply.
-          <br />
-          Live rooted.
-        </p>
+      <section className="est-pagehero">
+        <p className="est-label">LEARN WITH ROOTED</p>
+        <h1>Wisdom for<br />the life before you.</h1>
+        <p>Thoughtful teaching with room to listen, reflect and respond.</p>
       </section>
-
-      {/* INTRODUCTION */}
-      <section
-        style={{
-          maxWidth: "760px",
-          margin: "0 auto",
-          padding: "5rem 1.5rem",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "5rem",
-          }}
-        >
-          <p className="section-label">THE ROOTED CLASSROOM</p>
-
-          <h2
-            style={{
-              marginBottom: "2rem",
-              lineHeight: "1.2",
-            }}
-          >
-            Go deeper
-            <br />
-            than the page.
-          </h2>
-
-          <p
-            style={{
-              maxWidth: "650px",
-              margin: "0 auto",
-              lineHeight: "1.9",
-              textAlign: "justify",
-            }}
-          >
-            Rooted courses are designed to help you slow down, study
-            Scripture, ask honest questions and put what you are learning into
-            practice.
-          </p>
-        </div>
-
-        {/* SCRIPTURE */}
-        <div
-          style={{
-            padding: "3rem 2rem",
-            marginBottom: "5rem",
-            textAlign: "center",
-            borderTop: "1px solid rgba(0,0,0,0.15)",
-            borderBottom: "1px solid rgba(0,0,0,0.15)",
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              fontSize: "2rem",
-              marginBottom: "1rem",
-            }}
-          >
-            “
-          </span>
-
-          <p
-            style={{
-              fontSize: "1.3rem",
-              lineHeight: "1.8",
-              fontStyle: "italic",
-              maxWidth: "600px",
-              margin: "0 auto 1.5rem",
-            }}
-          >
-            Rooted and built up in Him and established in the faith.
-          </p>
-
-          <p
-            style={{
-              fontSize: "0.75rem",
-              letterSpacing: "0.12em",
-            }}
-          >
-            COLOSSIANS 2:7 · WEB
-          </p>
-        </div>
-
-        {/* AVAILABLE COURSES */}
-        <section style={{ marginBottom: "5rem" }}>
-          <p className="section-label">AVAILABLE NOW</p>
-
-          <h2
-            style={{
-              marginBottom: "2rem",
-              lineHeight: "1.2",
-            }}
-          >
-            Start learning.
-          </h2>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5rem",
-            }}
-          >
-            {availableCourses.map((course) => (
-              <div
-                key={course.title}
-                style={{
-                  border: "1px solid rgba(0,0,0,0.15)",
-                  padding: "2.5rem",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "0.75rem",
-                    letterSpacing: "0.12em",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  {course.meta}
-                </p>
-
-                <h3
-                  style={{
-                    fontSize: "2rem",
-                    lineHeight: "1.2",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  {course.title}
-                </h3>
-
-                <p
-                  style={{
-                    lineHeight: "1.9",
-                    maxWidth: "600px",
-                    marginBottom: "2rem",
-                    textAlign: "justify",
-                  }}
-                >
-                  {course.description}
-                </p>
-
-                <Link href={course.href} className="primary-button">
-                  Explore the course
-                  <span>→</span>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* UPCOMING COURSES */}
-        <section style={{ marginBottom: "5rem" }}>
-          <p className="section-label">COMING SOON</p>
-
-          <h2
-            style={{
-              marginBottom: "2rem",
-              lineHeight: "1.2",
-            }}
-          >
-            More courses
-            <br />
-            are coming.
-          </h2>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-            }}
-          >
-            {upcomingCourses.map((course) => (
-              <div
-                key={course.title}
-                style={{
-                  padding: "2rem",
-                  border: "1px solid rgba(0,0,0,0.1)",
-                  opacity: 0.78,
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "0.7rem",
-                    letterSpacing: "0.12em",
-                    marginBottom: "0.8rem",
-                  }}
-                >
-                  COMING SOON
-                </p>
-
-                <h3
-                  style={{
-                    fontSize: "1.5rem",
-                    lineHeight: "1.3",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  {course.title}
-                </h3>
-
-                <p
-                  style={{
-                    lineHeight: "1.8",
-                    margin: 0,
-                    textAlign: "justify",
-                  }}
-                >
-                  {course.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CLOSING */}
-        <section
-          style={{
-            padding: "4rem 2rem",
-            textAlign: "center",
-            borderTop: "1px solid rgba(0,0,0,0.15)",
-            borderBottom: "1px solid rgba(0,0,0,0.15)",
-            marginBottom: "4rem",
-          }}
-        >
-          <p className="section-label">THE INVITATION</p>
-
-          <h2
-            style={{
-              lineHeight: "1.25",
-              margin: "1.5rem auto",
-            }}
-          >
-            Don&apos;t just
-            <br />
-            consume.
-            <br />
-            Be formed.
-          </h2>
-
-          <p
-            style={{
-              maxWidth: "580px",
-              margin: "0 auto",
-              lineHeight: "1.9",
-            }}
-          >
-            These courses are not simply information to collect. They are
-            invitations to slow down, encounter God in His Word and allow what
-            you learn to become part of how you live.
-          </p>
-        </section>
-
-        <div style={{ textAlign: "center" }}>
-          <Link href="/" className="text-link">
-            ← Back home
+      <section className="est-section est-green">
+        <p className="est-label">NEW · 2–6 NOVEMBER 2026</p>
+        <h2>Established, Still Becoming</h2>
+        <p>A five-day course for the person who is carrying something new and still feels unready. Includes teaching, a workbook and daily slides.</p>
+        <a className="est-button est-light" href="https://www.rootedwithkhethiwe.space/courses/established">View course and register →</a>
+      </section>
+      <section className="est-section">
+        <p className="est-label">FREE LIVE TEACHING · 24–26 NOVEMBER 2026</p>
+        <h2>Meet Me at the Well</h2>
+        <p>Three evenings in Scripture on character, courtship, and the marriage promise. Open to everyone, with no sign-in required.</p>
+        <a className="est-button" href="https://www.rootedwithkhethiwe.space/courses/meet-me-at-the-well">Explore the three days →</a>
+      </section>
+      <section className="est-section">
+        <p className="est-label">MORE COURSES</p>
+        <div className="est-days">
+          <Link className="est-card" href="/courses/school-of-the-prophets">
+            <h2>School of the Prophets</h2>
+            <span>Enter the five lessons →</span>
+          </Link>
+          <Link className="est-card" href="/courses/good-builders-are-good-stewards">
+            <h2>Good Builders Are Good Stewards</h2>
+            <span>Explore course →</span>
+          </Link>
+          <Link className="est-card" href="/courses/build-according-to-pattern">
+            <h2>Build According to Pattern</h2>
+            <span>Explore course →</span>
+          </Link>
+          <Link className="est-card" href="/courses/before-the-assignment">
+            <h2>Before the Assignment</h2>
+            <span>Explore course →</span>
+          </Link>
+          <Link className="est-card" href="/courses/rosh-hashanah">
+            <h2>Rosh Hashanah</h2>
+            <span>Explore course →</span>
           </Link>
         </div>
       </section>
-
-      <footer>
-        <div className="footer-brand">MIDWEEK ROOTED</div>
-
-        <div>A monthly Scripture journey</div>
+      <footer className="est-footer">
+        <Link className="est-brand" href="/">ROOTED <span>with Khethiwe</span></Link>
+        <p>Learning to live in what God is building.</p>
+        <a href="mailto:rootedwithkhethiwe@gmail.com">Get in touch</a>
       </footer>
     </main>
   );
