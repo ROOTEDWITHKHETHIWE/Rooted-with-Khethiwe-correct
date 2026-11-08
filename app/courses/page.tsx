@@ -2,6 +2,13 @@ import Link from "next/link";
 
 const availableCourses = [
   {
+    title: "School of the Prophets",
+    description:
+      "Five self-paced lessons on hearing as a servant, discerning what you perceive and stewarding what you receive.",
+    meta: "5-LESSON FOUNDATIONS COURSE",
+    href: "/courses/school-of-the-prophets",
+  },
+  {
     title: "Good Builders Are Good Stewards",
     description:
       "A five-day journey of faithfully stewarding what God has placed in your hands, anchored in the parable of the talents.",

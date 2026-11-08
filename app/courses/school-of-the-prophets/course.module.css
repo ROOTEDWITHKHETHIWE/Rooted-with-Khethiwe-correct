@@ -20,3 +20,39 @@
 .lessons h3 { margin: .3rem 0; font-size: 1.35rem; }
 .lessons p { margin: .35rem 0 .7rem; }
 .lessons .label, .lessons a { color: #70522f; }
+
+.page {
+  color-scheme: dark;
+  background: radial-gradient(ellipse at 50% 8rem, #473253 0, #291e39 35rem);
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.hero {
+  border: 1px solid #92754e;
+  margin: 1rem 0 2rem;
+  padding-inline: clamp(1rem, 5vw, 3rem);
+}
+.hero h1, .section h2, .lessons h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.eye {
+  width: min(38vw, 10rem);
+  margin-block: 2rem;
+}
+.section {
+  color-scheme: light;
+  border-radius: 0;
+  border: 1px solid #e0bb7b;
+}
+.lessons a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.back:focus-visible, .lessons a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}

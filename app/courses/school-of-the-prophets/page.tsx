@@ -21,7 +21,7 @@ const lessons = [
   },
   {
     "title": "Daniel the Interpreter",
-    "summary": "Learn from Daniel’s dependence on God and work through a dream without rushing to conclusions.",
+    "summary": "Learn from Daniel’s dependence on God, then explore biblical associations for colours, numbers and dream symbols.",
     "file": "03_daniel_the_interpreter.pdf"
   },
   {
@@ -47,13 +47,14 @@ export default function SchoolOfTheProphets() {
             <path d="M7 43Q65 -13 123 43Q65 99 7 43Z" />
             <circle cx="65" cy="43" r="21" />
             <circle cx="65" cy="43" r="8" />
+            <path d="M65 3v8m-4-4h8m-4 68v8m-4-4h8" />
           </svg>
           <h1>School of the Prophets</h1>
           <p>Learn to listen as a servant, weigh what you perceive and respond faithfully to what God entrusts to you.</p>
         </header>
         <section aria-labelledby="lesson-heading" className={styles.section}>
           <h2 id="lesson-heading">Five self-paced lessons</h2>
-          <p>Work through one lesson a week, or take more time for the Scripture reading, practice and reflection. Each PDF includes teaching notes, an exercise and a closing prayer.</p>
+          <p>Work through one lesson a week, or take more time for the Scripture reading, practice and reflection. Each PDF includes teaching notes, the full assigned Scripture readings, an exercise and a closing prayer.</p>
           <ol className={styles.lessons}>
             {lessons.map((lesson, index) => (
               <li key={lesson.file}>
